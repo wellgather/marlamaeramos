@@ -5,27 +5,29 @@ export const PressMarquee = () => {
   return (
     <section className="py-12 border-y border-border/40 bg-white/40">
       <p className="text-center text-xs uppercase tracking-[0.3em] text-muted-foreground mb-8">
-        As featured in
+        Affiliations and As seen on
       </p>
       <div className="marquee">
         <div className="marquee-track">
           {items.map((logo, i) => (
-            <span
-              key={i}
-              className="font-display text-2xl md:text-3xl text-foreground/40 whitespace-nowrap tracking-widest"
-            >
-              {logo}
-            </span>
+            <img
+              key={`a-${i}`}
+              src={logo.src}
+              alt={logo.alt}
+              loading="lazy"
+              className="h-12 md:h-14 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity mx-10"
+            />
           ))}
         </div>
         <div className="marquee-track" aria-hidden>
           {items.map((logo, i) => (
-            <span
-              key={i}
-              className="font-display text-2xl md:text-3xl text-foreground/40 whitespace-nowrap tracking-widest"
-            >
-              {logo}
-            </span>
+            <img
+              key={`b-${i}`}
+              src={logo.src}
+              alt=""
+              loading="lazy"
+              className="h-12 md:h-14 w-auto object-contain opacity-70 mx-10"
+            />
           ))}
         </div>
       </div>
