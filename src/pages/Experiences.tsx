@@ -17,9 +17,9 @@ const PAYPAL_URL = "https://www.wellgather.com?utm_source=website&utm_medium=web
 const CALENDAR_URL = "https://calendar.notion.so/meet/marlaramos/wellgather";
 
 const slides = [
-  { src: retreat, title: "Coastal Retreats", desc: "Five-day immersions on the edge of the sea.", date: "TBA", location: "TBA", url: "https://www.wellgather.com" },
-  { src: soundHealing, title: "Sound Healing", desc: "Crystal bowls, voice, and frequency journeys.", date: "TBA", location: "TBA", url: "https://www.wellgather.com" },
-  { src: yoga, title: "Movement & Breath", desc: "Sunrise sessions to wake the body gently.", date: "TBA", location: "TBA", url: "https://www.wellgather.com" },
+  { src: retreat, title: "Coastal Retreats", desc: "Five-day immersions on the edge of the sea.", date: "TBA", location: "Phuket", url: "https://www.wellgather.com" },
+  { src: soundHealing, title: "Sound Healing", desc: "Crystal bowls, voice, and frequency journeys.", date: "TBA", location: "Phuket", url: "https://www.wellgather.com" },
+  { src: yoga, title: "Movement & Breath", desc: "Sunrise sessions to wake the body gently.", date: "TBA", location: "Phuket", url: "https://www.wellgather.com" },
 ];
 
 const Experiences = () => {
@@ -115,7 +115,7 @@ const Experiences = () => {
       <section className="container py-6">
         <div className="rounded-2xl bg-secondary px-6 py-6 md:px-10 md:py-7 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="font-display text-2xl md:text-3xl text-secondary-foreground text-center md:text-left">
-            Book Marla for a Wellness Experience
+            Book Marla for a Wellness Retreat
           </p>
           <Button variant="coral" size="lg" asChild>
             <a href={CALENDAR_URL} target="_blank" rel="noreferrer">Collaborate</a>
