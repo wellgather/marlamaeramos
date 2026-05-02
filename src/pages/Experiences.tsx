@@ -1,7 +1,6 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight, Sparkles, Calendar, MapPin } from "lucide-react";
+import { Sparkles, Calendar, MapPin } from "lucide-react";
 import collage1 from "@/assets/collage-1.jpg";
 import collage2 from "@/assets/collage-2.jpg";
 import collage3 from "@/assets/collage-3.jpg";
@@ -16,11 +15,6 @@ const CALENDAR_URL = "https://calendar.notion.so/meet/marlaramos/wellgather";
 const slides = UPCOMING_EXPERIENCES;
 
 const Experiences = () => {
-  const [i, setI] = useState(0);
-  const next = () => setI((p) => (p + 1) % slides.length);
-  const prev = () => setI((p) => (p - 1 + slides.length) % slides.length);
-
-
   return (
     <>
       {/* HERO */}
@@ -54,68 +48,42 @@ const Experiences = () => {
           <h2 className="font-display text-4xl md:text-5xl">Join my upcoming wellness activities.</h2>
         </div>
 
-        <div className="relative max-w-md mx-auto">
-          <div className="relative h-[560px]">
-            {slides.map((e, idx) => {
-              const offset = (idx - i + slides.length) % slides.length;
-              const isTop = offset === 0;
-              return (
-                <motion.a
-                  key={e.title}
-                  href={e.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  animate={{
-                    x: offset * 18,
-                    y: offset * 18,
-                    scale: 1 - offset * 0.05,
-                    opacity: offset > 2 ? 0 : 1,
-                    zIndex: slides.length - offset,
-                  }}
-                  transition={{ duration: 0.5, ease: "easeOut" }}
-                  className="absolute inset-0 block rounded-3xl overflow-hidden bg-white shadow-card"
-                  style={{ pointerEvents: isTop ? "auto" : "none" }}
-                  aria-hidden={!isTop}
-                >
-                  <div className="relative w-full h-full overflow-hidden">
-                    <img src={e.image} alt={e.title} className="w-full h-full object-cover" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                    <div className="absolute top-4 left-4">
-                      <span className="text-[10px] uppercase tracking-widest bg-white/90 text-primary px-3 py-1.5 rounded-full">
-                        {e.type}
-                      </span>
-                    </div>
-                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                      <h3 className="font-display text-2xl leading-tight mb-2">{e.title}</h3>
-                      <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs opacity-95">
-                        <span className="inline-flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5" /> {e.date}</span>
-                        <span className="inline-flex items-center gap-1.5"><MapPin className="w-3.5 h-3.5" /> {e.location}</span>
-                      </div>
-                    </div>
-                  </div>
-                </motion.a>
-              );
-            })}
-          </div>
-
-          <div className="flex items-center justify-center gap-4 mt-8">
-            <button onClick={prev} className="w-11 h-11 rounded-full bg-white shadow-soft flex items-center justify-center hover:bg-secondary transition-colors" aria-label="Previous">
-              <ChevronLeft className="w-5 h-5" />
-            </button>
-            <div className="flex gap-2">
-              {slides.map((_, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => setI(idx)}
-                  className={`h-1.5 rounded-full transition-all ${idx === i ? "w-10 bg-primary" : "w-2 bg-border"}`}
-                  aria-label={`Slide ${idx + 1}`}
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+          {slides.map((e, idx) => (
+            <motion.a
+              key={e.title}
+              href={e.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: idx * 0.1 }}
+              className="group block rounded-3xl overflow-hidden bg-white shadow-card hover:shadow-coral transition-all hover:-translate-y-1"
+            >
+              <div className="relative aspect-[4/5] overflow-hidden">
+                <img
+                  src={e.image}
+                  alt={e.title}
+                  loading="lazy"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-              ))}
-            </div>
-            <button onClick={next} className="w-11 h-11 rounded-full bg-white shadow-soft flex items-center justify-center hover:bg-secondary transition-colors" aria-label="Next">
-              <ChevronRight className="w-5 h-5" />
-            </button>
-          </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                <div className="absolute top-4 left-4">
+                  <span className="text-[10px] uppercase tracking-widest bg-white/90 text-primary px-3 py-1.5 rounded-full">
+                    {e.type}
+                  </span>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                  <h3 className="font-display text-2xl leading-tight mb-2">{e.title}</h3>
+                  <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs opacity-95">
+                    <span className="inline-flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5" /> {e.date}</span>
+                    <span className="inline-flex items-center gap-1.5"><MapPin className="w-3.5 h-3.5" /> {e.location}</span>
+                  </div>
+                </div>
+              </div>
+            </motion.a>
+          ))}
         </div>
       </section>
 
