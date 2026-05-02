@@ -119,9 +119,9 @@ export const Header = () => {
             </SheetTrigger>
             <SheetContent className="w-full sm:max-w-md bg-background overflow-y-auto">
               <div className="space-y-6 pt-6">
-                <img src={portrait} alt="Aria" className="w-32 h-32 rounded-full mx-auto object-cover ring-4 ring-primary-soft" />
+                <img src={portrait} alt="Marla Ramos" className="w-32 h-32 rounded-full mx-auto object-cover ring-4 ring-primary-soft" />
                 <div className="text-center space-y-2">
-                  <h2 className="font-display text-3xl">About Aria</h2>
+                  <h2 className="font-display text-3xl">Marla Ramos</h2>
                   <p className="text-sm text-muted-foreground uppercase tracking-widest">Wellness Expert · Coach · Guide</p>
                 </div>
                 <div className="space-y-4 text-foreground/80 leading-relaxed">
