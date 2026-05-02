@@ -65,6 +65,7 @@ export const PAIN_POINTS = [
   "You can't confidently raise rates or attract premium wellness travelers without third-party credibility.",
   "Audits and accreditations feel opaque, slow, and expensive to navigate alone.",
   "Your team is brilliant in delivery, but you lack the SOPs and documentation an auditor expects.",
+  "Hiring a full-time wellness manager is expensive — this solves it by ensuring you only pay for time and result-driven impact.",
 ];
 
 export const CREDENTIALS = [
