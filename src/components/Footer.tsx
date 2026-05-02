@@ -30,7 +30,7 @@ export const Footer = () => (
           className="rounded-full"
         >
           <a
-            href="https://www.tiktok.com/@marlameyy"
+            href="https://www.instagram.com/wellgather"
             target="_blank"
             rel="noopener noreferrer"
           >
