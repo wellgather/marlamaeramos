@@ -107,7 +107,7 @@ const WellnessExperience = () => (
       <div className="relative overflow-hidden rounded-3xl bg-gradient-coral p-12 md:p-20 text-primary-foreground text-center">
         <span className="inline-block text-xs uppercase tracking-[0.3em] mb-4 opacity-80">The investment</span>
         <h2 className="font-display text-4xl md:text-6xl mb-3 leading-tight">
-          A complete 3-month container
+          A complete 1-month container
         </h2>
         <div className="flex items-end justify-center gap-2 mb-2">
           <span className="font-display text-6xl md:text-7xl">$399</span>
