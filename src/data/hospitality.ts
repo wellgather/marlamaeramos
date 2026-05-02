@@ -70,6 +70,10 @@ export const PAIN_POINTS = [
 export const CREDENTIALS = [
   "Certified WITT® Accredited Professional",
   "Certified WITT® Wellness Specialist",
+  "Certified Wellness Travel Specialist",
+  "Co-Ambassador to Philippines World Wellness Weekend",
+  "Years of Expertise in Wellness Tourism Marketing",
+  "Founder of Wellgather - A Wellness Gathering Platform",
 ];
 
 export const TESTIMONIALS = [
