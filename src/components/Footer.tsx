@@ -12,7 +12,7 @@ const TikTokIcon = ({ className = "" }: { className?: string }) => (
 const socials = [
   { href: "https://www.linkedin.com/in/marlaramos/", label: "LinkedIn", Icon: Linkedin },
   { href: "https://www.instagram.com/wellgather", label: "Instagram", Icon: Instagram },
-  { href: "mailto:marlamae_ramos@yahoo.com", label: "Email", Icon: Mail },
+  { href: "mailto:marla@wellgather.com", label: "Email", Icon: Mail },
 ];
 
 export const Footer = () => (
@@ -71,8 +71,8 @@ export const Footer = () => (
       </div>
       <div>
         <div className="text-xs uppercase tracking-widest text-muted-foreground mb-3">Contact</div>
-        <a href="mailto:marlamae_ramos@yahoo.com" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-          marlamae_ramos@yahoo.com
+        <a href="mailto:marla@wellgather.com" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+          Schedule a Call
         </a>
         <p className="text-sm text-muted-foreground mt-1">By appointment, worldwide</p>
       </div>
