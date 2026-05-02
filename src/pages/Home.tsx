@@ -19,7 +19,7 @@ const ctas = [
   {
     to: "/hospitality",
     eyebrow: "For hotels & resorts",
-    title: "Get Wellness Certified",
+    title: "Get Wellness Certified ",
     desc: "Get WITT® audit ready & be guided for the certification path.",
     style: "bg-white border border-border/40 shadow-card",
     arrowClass: "text-primary",
