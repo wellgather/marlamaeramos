@@ -112,8 +112,8 @@ export const Header = () => {
             <SheetTrigger asChild>
               <button className="rounded-full ring-2 ring-primary/20 hover:ring-primary/60 transition-all overflow-hidden">
                 <Avatar className="h-11 w-11">
-                  <AvatarImage src={portrait} alt="About Aria" />
-                  <AvatarFallback className="bg-primary-soft text-primary">A</AvatarFallback>
+                  <AvatarImage src={portrait} alt="Marla Ramos" />
+                  <AvatarFallback className="bg-primary-soft text-primary">MR</AvatarFallback>
                 </Avatar>
               </button>
             </SheetTrigger>
