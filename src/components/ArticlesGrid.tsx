@@ -14,7 +14,7 @@ export const ArticlesGrid = () => (
       <div>
         <p className="text-xs uppercase tracking-[0.3em] text-primary mb-3">Press & Stories</p>
         <h2 className="font-display text-4xl md:text-5xl max-w-xl">
-          Words written about the work
+          In the Press
         </h2>
       </div>
     </div>
