@@ -36,7 +36,7 @@ const Experiences = () => {
             <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-primary px-4 py-2 rounded-full bg-primary-soft/60">
               <Sparkles className="w-3 h-3" /> THE MOVEMENT
             </span>
-            <h1 className="font-display text-5xl leading-[1.05] text-secondary-foreground md:text-9xl">
+            <h1 className="font-display text-5xl leading-[1.05] text-secondary-foreground md:text-7xl">
               Don't miss the wellness experiences <em className="text-primary not-italic">near you.</em>
             </h1>
             <p className="text-lg md:text-xl text-foreground/70 max-w-2xl mx-auto leading-relaxed">
