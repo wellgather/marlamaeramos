@@ -79,13 +79,11 @@ const Home = () => (
               <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-primary px-4 py-2 rounded-full bg-white/70 backdrop-blur">
                 <Sparkles className="w-3 h-3" /> Wellness, reimagined
               </span>
-              <h1 className="font-display text-5xl md:text-7xl leading-[1.02] tracking-tight text-foreground drop-shadow-sm">
-                A return to <em className="text-primary not-italic">stillness.</em>
-                <br /> A path to your <em className="text-primary not-italic">whole self.</em>
+              <h1 className="font-display text-5xl leading-[1.02] tracking-tight drop-shadow-sm md:text-5xl text-primary-foreground shadow-lg">
+                Let's build wellness brands that transforms.
               </h1>
               <p className="text-base md:text-lg text-foreground/80 max-w-md leading-relaxed">
-                Personalized consultancy, transformative courses, and intimate experiences —
-                crafted to bring you home to your body, breath, and becoming.
+                Let’s co-create transformative social wellness experiences tailored for you and your tribe.
               </p>
             </motion.div>
 
