@@ -64,7 +64,7 @@ const WellnessExperience = () => (
         <h2 className="font-display text-4xl md:text-5xl mb-12 text-center">Explore what's inside</h2>
         <Accordion type="single" collapsible className="space-y-3">
           {[
-            { q: "Foundations of Embodiment", a: "Six weeks of breathwork, somatic practice, and nervous system regulation. We build the floor on which everything else stands." },
+            { q: "Building a Repeat Wellness Community", a: "Six weeks of breathwork, somatic practice, and nervous system regulation. We build the floor on which everything else stands." },
             { q: "Shadow & Story", a: "We meet the patterns gently — uncovering inherited stories, reframing old scripts, and reclaiming the parts of you that were exiled." },
             { q: "Ritual Design", a: "Together we craft daily and seasonal rituals that fit your life — sustainable practices you'll carry far beyond our work." },
             { q: "Integration & Guidance", a: "Voice memos, written reflections, custom audio meditations — between-session support so you're never doing the work alone." },
