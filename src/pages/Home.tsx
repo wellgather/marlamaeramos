@@ -94,7 +94,7 @@ const Home = () => (
               className="md:justify-self-end w-full flex md:block justify-center"
             >
               <CallbackForm
-                title="Begin Your Transformation"
+                title="Book a Discovery Call"
                 subtitle="Tell me a little about you, I'll personally reach out."
                 cta="Request a Callback"
               />
