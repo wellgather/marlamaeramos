@@ -11,9 +11,7 @@ const TikTokIcon = ({ className = "" }: { className?: string }) => (
 
 const socials = [
   { href: "https://www.linkedin.com/in/marlaramos/", label: "LinkedIn", Icon: Linkedin },
-  { href: "https://www.instagram.com/marlameyy/", label: "Instagram", Icon: Instagram },
-  { href: "https://www.tiktok.com/@marlameyy", label: "TikTok", Icon: TikTokIcon },
-  { href: "#", label: "YouTube", Icon: Youtube },
+  { href: "https://www.instagram.com/wellgather", label: "Instagram", Icon: Instagram },
   { href: "mailto:marlamae_ramos@yahoo.com", label: "Email", Icon: Mail },
 ];
 
