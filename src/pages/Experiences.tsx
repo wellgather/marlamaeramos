@@ -95,39 +95,28 @@ const Experiences = () => {
         </div>
       </section>
 
-      {/* INSTAGRAM — join the social wellness movement */}
+      {/* INSTAGRAM COLLAGE — minimalist 6-image strip */}
       <section className="container pt-8 pb-20">
-        <div className="rounded-3xl overflow-hidden bg-gradient-soft border border-border/40 shadow-card p-8 md:p-14">
-          <div className="text-center max-w-2xl mx-auto mb-10">
-            <p className="text-xs uppercase tracking-[0.3em] text-primary mb-3">@wellgather</p>
-            <h2 className="font-display text-4xl md:text-5xl leading-tight mb-4">
-              Join the social <em className="text-primary not-italic">wellness movement.</em>
-            </h2>
-            <p className="text-foreground/70">
-              Daily rituals, retreat moments, and reflections — straight from our community.
-            </p>
+        <a
+          href="https://www.instagram.com/wellgather"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block group"
+          aria-label="View @wellgather on Instagram"
+        >
+          <div className="grid grid-cols-3 md:grid-cols-6 gap-1 md:gap-2">
+            {[soundHealing, retreat, yoga, retreat, soundHealing, yoga].map((src, idx) => (
+              <div key={idx} className="aspect-square overflow-hidden">
+                <img
+                  src={src}
+                  alt=""
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+            ))}
           </div>
-
-          <div className="max-w-md mx-auto rounded-2xl overflow-hidden bg-white shadow-soft border border-border/40">
-            <iframe
-              src="https://www.instagram.com/wellgather/embed"
-              title="Wellgather on Instagram"
-              loading="lazy"
-              className="w-full"
-              style={{ height: 720, border: 0 }}
-              scrolling="no"
-              allowTransparency
-            />
-          </div>
-
-          <div className="text-center mt-8">
-            <Button variant="coral" size="lg" asChild>
-              <a href="https://www.instagram.com/wellgather" target="_blank" rel="noopener noreferrer">
-                Follow @wellgather on Instagram
-              </a>
-            </Button>
-          </div>
-        </div>
+        </a>
       </section>
 
       {/* FINAL CTA */}
