@@ -38,7 +38,7 @@ const pillars = [
   {
     icon: Leaf,
     title: "Rooted in Experience",
-    desc: "Ancient traditions meet modern coaching.",
+    desc: "Backed by years of in tourism and wellness experience design.",
   },
   {
     icon: HeartHandshake,
