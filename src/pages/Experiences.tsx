@@ -45,7 +45,7 @@ const Experiences = () => {
             </p>
             <div className="pt-4">
               <Button variant="coral" size="xl" asChild>
-                <a href={PAYPAL_URL} target="_blank" rel="noreferrer">Book Your Spot →</a>
+                <a href={PAYPAL_URL} target="_blank" rel="noreferrer">Find Wellness Activities Near You →</a>
               </Button>
             </div>
             <p className="text-xs text-muted-foreground">Limited spaces · Worldwide locations</p>
