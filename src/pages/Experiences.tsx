@@ -34,7 +34,7 @@ const Experiences = () => {
               Don't miss the wellness experiences <em className="text-primary not-italic">near you.</em>
             </h1>
             <p className="text-lg md:text-xl text-foreground/70 max-w-2xl mx-auto leading-relaxed">
-              Step away from the noise. Join intimate retreats, sound ceremonies, and movement
+              Join our mission to make wellness experiences accessible and part of the daily lives of every person. Step away from the noise. Join intimate retreats, sound ceremonies, and movement
               practices designed to return you to your center — together, in real life. See the experiences in Wellgather - our social wellness platform where you can find, book, share and organize your own wellness activities.
             </p>
             <div className="pt-4">
@@ -51,7 +51,7 @@ const Experiences = () => {
       <section className="container py-16">
         <div className="text-center mb-10">
           <p className="text-xs uppercase tracking-[0.3em] text-primary mb-3">THE MOVEMENT</p>
-          <h2 className="font-display text-4xl md:text-5xl">Join our mission to make wellness experiences accessible and part of the daily lives of every person.</h2>
+          <h2 className="font-display text-4xl md:text-5xl">Join my upcoming wellness activities.</h2>
         </div>
 
         <div className="relative max-w-5xl mx-auto">
