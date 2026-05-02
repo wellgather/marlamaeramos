@@ -4,7 +4,6 @@ import { ArrowRight, Sparkles, Leaf, HeartHandshake, Compass, Calendar, MapPin }
 import { PressMarquee } from "@/components/PressMarquee";
 import { ArticlesGrid } from "@/components/ArticlesGrid";
 import { CallbackForm } from "@/components/CallbackForm";
-import { AFFILIATIONS } from "@/data/affiliations";
 import { UPCOMING_EXPERIENCES } from "@/data/experiences";
 import heroSunset from "@/assets/hero-sunset.jpg";
 
@@ -166,30 +165,6 @@ const Home = () => (
       </div>
     </section>
 
-    {/* AFFILIATIONS — moved here, right below The Philosophy */}
-    <section className="container py-16 md:py-20">
-      <div className="text-center mb-10">
-        <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-3">Affiliations</p>
-        <h2 className="font-display text-3xl md:text-4xl">Trusted partners & accreditations</h2>
-      </div>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 max-w-5xl mx-auto">
-        {AFFILIATIONS.map(a => (
-          <div
-            key={a.name}
-            className="aspect-[3/2] rounded-2xl bg-white border border-border/40 shadow-card flex items-center justify-center p-4 hover:shadow-soft transition-shadow"
-          >
-            {a.logo ? (
-              <img src={a.logo} alt={a.name} className="max-h-12 w-auto opacity-80" loading="lazy" />
-            ) : (
-              <span className="font-display text-base md:text-lg text-foreground/60 text-center tracking-wide">
-                {a.name}
-              </span>
-            )}
-          </div>
-        ))}
-      </div>
-    </section>
-
     <PressMarquee />
 
     {/* UPCOMING EXPERIENCES — modeled after pilates "Our Sessions" banner */}
@@ -205,13 +180,14 @@ const Home = () => (
 
         <div className="grid md:grid-cols-3 gap-6 md:gap-8">
           {UPCOMING_EXPERIENCES.map((e, i) => (
-            <motion.article
+            <motion.a
               key={e.title}
+              href={e.url}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="group rounded-3xl overflow-hidden bg-white shadow-card hover:shadow-coral transition-all hover:-translate-y-1"
+              className="group block rounded-3xl overflow-hidden bg-white shadow-card hover:shadow-coral transition-all hover:-translate-y-1"
             >
               <div className="relative aspect-[4/5] overflow-hidden">
                 <img
