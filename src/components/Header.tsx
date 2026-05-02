@@ -37,7 +37,7 @@ export const Header = () => {
   const consultancyActive = consultancyChildren.some(c => location.pathname.startsWith(c.to));
 
   return (
-    <header className="absolute top-0 left-0 right-0 z-40 w-full">
+    <header className="sticky top-0 z-40 w-full bg-background/90 backdrop-blur border-b border-border/40">
       <div className="container relative flex items-center justify-between h-20">
         <div className="flex items-center gap-3">
           <Link to="/" className="font-display text-xl tracking-tight">
