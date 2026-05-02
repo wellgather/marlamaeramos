@@ -20,8 +20,7 @@ const WellnessExperience = () => (
             Let's design your <em className="text-primary not-italic">wellness experience.</em>
           </h1>
           <p className="text-lg md:text-xl text-foreground/70 max-w-2xl mx-auto leading-relaxed">
-            A guided journey designed for you alone — to soften the patterns, deepen the breath,
-            and finally meet the version of you that's been waiting underneath.
+            When your wellness vision needs direction, you need expert guidance to bring your wellness offering to life. I will help you design intentional, transformative experiences tailored to your brand.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center pt-4">
             <Button variant="coral" size="xl" asChild>
