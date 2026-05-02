@@ -47,8 +47,8 @@ const pillars = [
   },
   {
     icon: Compass,
-    title: "A Path that Lasts",
-    desc: "Quiet shifts that stay with you for years.",
+    title: "Certified Professional",
+    desc: "Aligned with global standards in wellness tourism.",
   },
 ];
 
