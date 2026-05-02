@@ -25,6 +25,8 @@ export const ArticlesGrid = () => (
           <CarouselItem key={i} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
             <a
               href={a.url}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group block h-full rounded-3xl overflow-hidden bg-gradient-soft border border-border/40 shadow-card hover:shadow-soft transition-all hover:-translate-y-1"
             >
               <div className="relative aspect-[4/3] overflow-hidden bg-muted">
