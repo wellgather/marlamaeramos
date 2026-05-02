@@ -38,7 +38,7 @@ const WellnessExperience = () => (
     <section id="offer" className="container py-24">
       <div className="text-center mb-16">
         <p className="text-xs uppercase tracking-[0.3em] text-primary mb-3">What you receive</p>
-        <h2 className="font-display text-4xl md:text-5xl">A complete container for your becoming</h2>
+        <h2 className="font-display text-4xl md:text-5xl">Define your signature wellness experience that defines your brand.</h2>
       </div>
       <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
         {[
