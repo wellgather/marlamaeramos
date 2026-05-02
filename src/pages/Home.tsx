@@ -19,7 +19,7 @@ const ctas = [
   {
     to: "/hospitality",
     eyebrow: "For hotels & resorts",
-    title: "Get Wellness Certified",
+    title: "Get Wellness Certified ",
     desc: "Get WITT® audit ready & be guided for the certification path.",
     style: "bg-white border border-border/40 shadow-card",
     arrowClass: "text-primary",
@@ -122,7 +122,7 @@ const Home = () => (
               <h3 className="font-display text-xl mb-1.5 leading-tight">{c.title}</h3>
               <p className="text-xs opacity-80 mb-4">{c.desc}</p>
               <div className={`inline-flex items-center gap-1.5 text-xs font-medium ${c.arrowClass}`}>
-                Explore <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                IMMERSE <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
               </div>
             </Link>
           ))}

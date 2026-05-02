@@ -97,7 +97,7 @@ const Hospitality = () => {
           </p>
           <div className="mt-6">
             <Button variant="coral" size="lg" asChild>
-              <a href="#pricing">Get Wellness Certified</a>
+              <a href="#pricing">Get Wellness Certified </a>
             </Button>
           </div>
         </div>
