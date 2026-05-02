@@ -44,7 +44,7 @@ const WellnessExperience = () => (
         {[
           { icon: Calendar, title: "12 Weekly Sessions", desc: "Hour-long 1:1 calls, held in deep presence." },
           { icon: MessageCircle, title: "Voice Note Support", desc: "Daily access to me between our sessions." },
-          { icon: Heart, title: "Personalized Practices", desc: "Custom rituals made for your body, your life." },
+          { icon: Heart, title: "4 Weekly Sessions", desc: "Hour-long workshop held in deep presence." },
         ].map(item => (
           <div key={item.title} className="p-8 rounded-3xl bg-white border border-border/40 shadow-card">
             <div className="w-12 h-12 rounded-2xl bg-primary-soft flex items-center justify-center mb-5">
