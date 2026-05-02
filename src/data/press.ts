@@ -33,7 +33,7 @@ export const ARTICLES: {
   image: string;
 }[] = [
   // To make a card clickable, set `url` to the destination link (e.g. "https://...").
-  { title: "Wellness Reimagined: 5 Things to Reform the Wellness Industry", source: "MEDIUM", date: "Mar 2026", url: "#", image: article1 },
-  { title: "Special Episode: wmnsWORK Demo Day", source: "SOUL OF TRAVEL PODCAST", date: "Sep 2025", url: "#", image: article2 },
-  { title: "Philippines Celebrates First-Ever World Wellness Weekend", source: "WHEN IN MANILA", date: "Oct 2025", url: "#", image: article3 },
+  { title: "Wellness Reimagined: 5 Things to Reform the Wellness Industry", source: "MEDIUM", date: "Mar 2026", url: "https://medium.com/authority-magazine/wellness-reimagined-marla-ramos-of-wellgather-on-5-things-that-should-be-done-to-improve-and-08a3c8e7a116", image: article1 },
+  { title: "Special Episode: wmnsWORK Demo Day", source: "SOUL OF TRAVEL PODCAST", date: "Sep 2025", url: "https://www.souloftravelpodcast.com/season-6/episode243-wmns-work-demo-day", image: article2 },
+  { title: "Philippines Celebrates First-Ever World Wellness Weekend", source: "WHEN IN MANILA", date: "Oct 2025", url: "https://www.wheninmanila.com/philippines-celebrates-first-ever-world-wellness-weekend-at-coron/#gsc.tab=0", image: article3 },
 ];
