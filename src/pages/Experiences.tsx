@@ -17,9 +17,9 @@ const PAYPAL_URL = "https://www.wellgather.com?utm_source=website&utm_medium=web
 const CALENDAR_URL = "https://calendar.notion.so/meet/marlaramos/wellgather";
 
 const slides = [
-  { src: retreat, title: "Coastal Retreats", desc: "Five-day immersions on the edge of the sea.", date: "TBA", location: "Phuket", url: "https://www.wellgather.com" },
-  { src: soundHealing, title: "Sound Healing", desc: "Crystal bowls, voice, and frequency journeys.", date: "TBA", location: "Phuket", url: "https://www.wellgather.com" },
-  { src: yoga, title: "Movement & Breath", desc: "Sunrise sessions to wake the body gently.", date: "TBA", location: "Phuket", url: "https://www.wellgather.com" },
+  { src: retreat, title: "Coastal Retreats", desc: "Five-day immersions on the edge of the sea.", date: "TBA", location: "Bali", url: "https://www.wellgather.com" },
+  { src: soundHealing, title: "Sound Healing", desc: "Crystal bowls, voice, and frequency journeys.", date: "TBA", location: "Bali", url: "https://www.wellgather.com" },
+  { src: yoga, title: "Movement & Breath", desc: "Sunrise sessions to wake the body gently.", date: "TBA", location: "Bali", url: "https://www.wellgather.com" },
 ];
 
 const Experiences = () => {
