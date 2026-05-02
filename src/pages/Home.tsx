@@ -42,7 +42,7 @@ const pillars = [
   },
   {
     icon: HeartHandshake,
-    title: "Personal & Present",
+    title: "Intuitive & Energy Led",
     desc: "Designed around you — never one-size-fits-all.",
   },
   {
