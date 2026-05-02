@@ -86,7 +86,7 @@ const Hospitality = () => {
 
         <div className="max-w-3xl mx-auto mt-16 p-8 md:p-10 rounded-3xl bg-gradient-soft border border-border/40 shadow-card">
           <p className="text-lg md:text-xl leading-relaxed text-foreground/85">
-            Are you a resort or a brand doing a great job offering wellness experiences — but ready to
+            Are you a resort or a brand doing a great job offering wellness experiences, but ready to
             officially be <em className="text-primary not-italic">certified</em>?
           </p>
           <p className="mt-5 text-base text-foreground/70 leading-relaxed">
