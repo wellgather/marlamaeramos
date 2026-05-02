@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight, Sparkles } from "lucide-react";
+import { ChevronLeft, ChevronRight, Sparkles, Calendar, MapPin } from "lucide-react";
 import soundHealing from "@/assets/exp-soundhealing.jpg";
 import retreat from "@/assets/exp-retreat.jpg";
 import yoga from "@/assets/exp-yoga.jpg";
@@ -14,10 +14,12 @@ import collage6 from "@/assets/collage-6.jpg";
 
 const PAYPAL_URL = "https://www.wellgather.com?utm_source=website&utm_medium=web&utm_campaign=marlaramoswebsite&utm_id=mramos&utm_term=mmwebsite"; // user will swap
 
+const CALENDAR_URL = "https://calendar.notion.so/meet/marlaramos/wellgather";
+
 const slides = [
-  { src: retreat, title: "Coastal Retreats", desc: "Five-day immersions on the edge of the sea.", url: "https://www.wellgather.com" },
-  { src: soundHealing, title: "Sound Healing", desc: "Crystal bowls, voice, and frequency journeys.", url: "https://www.wellgather.com" },
-  { src: yoga, title: "Movement & Breath", desc: "Sunrise sessions to wake the body gently.", url: "https://www.wellgather.com" },
+  { src: retreat, title: "Coastal Retreats", desc: "Five-day immersions on the edge of the sea.", date: "TBA", location: "TBA", url: "https://www.wellgather.com" },
+  { src: soundHealing, title: "Sound Healing", desc: "Crystal bowls, voice, and frequency journeys.", date: "TBA", location: "TBA", url: "https://www.wellgather.com" },
+  { src: yoga, title: "Movement & Breath", desc: "Sunrise sessions to wake the body gently.", date: "TBA", location: "TBA", url: "https://www.wellgather.com" },
 ];
 
 const Experiences = () => {
@@ -80,6 +82,10 @@ const Experiences = () => {
                 <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12 text-primary-foreground">
                   <h3 className="font-display text-3xl md:text-5xl mb-2">{slides[i].title}</h3>
                   <p className="text-base md:text-lg opacity-90 max-w-md">{slides[i].desc}</p>
+                  <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm md:text-base opacity-95">
+                    <span className="inline-flex items-center gap-1.5"><Calendar className="w-4 h-4" /> {slides[i].date}</span>
+                    <span className="inline-flex items-center gap-1.5"><MapPin className="w-4 h-4" /> {slides[i].location}</span>
+                  </div>
                 </div>
               </motion.a>
             </AnimatePresence>
@@ -102,6 +108,18 @@ const Experiences = () => {
               />
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* COLLABORATE BANNER */}
+      <section className="container py-6">
+        <div className="rounded-2xl bg-secondary px-6 py-6 md:px-10 md:py-7 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="font-display text-2xl md:text-3xl text-secondary-foreground text-center md:text-left">
+            Book Marla for a Wellness Experience
+          </p>
+          <Button variant="coral" size="lg" asChild>
+            <a href={CALENDAR_URL} target="_blank" rel="noreferrer">Collaborate</a>
+          </Button>
         </div>
       </section>
 
