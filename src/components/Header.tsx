@@ -1,11 +1,10 @@
-import { Link, NavLink, useLocation } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
+import { Link, NavLink } from "react-router-dom";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
-import { CartDrawer } from "@/components/CartDrawer";
 import portrait from "@/assets/portrait.jpg";
 
 const navItems = [
@@ -16,7 +15,6 @@ const navItems = [
 
 export const Header = () => {
   const [aboutOpen, setAboutOpen] = useState(false);
-  const location = useLocation();
 
   return (
     <header className="sticky top-0 z-40 w-full">
@@ -54,8 +52,6 @@ export const Header = () => {
         </nav>
 
         <div className="flex items-center gap-2">
-          <CartDrawer />
-
           <Sheet open={aboutOpen} onOpenChange={setAboutOpen}>
             <SheetTrigger asChild>
               <button className="rounded-full ring-2 ring-primary/20 hover:ring-primary/60 transition-all overflow-hidden">
