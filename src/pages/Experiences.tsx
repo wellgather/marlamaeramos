@@ -6,7 +6,7 @@ import soundHealing from "@/assets/exp-soundhealing.jpg";
 import retreat from "@/assets/exp-retreat.jpg";
 import yoga from "@/assets/exp-yoga.jpg";
 
-const PAYPAL_URL = "https://paypal.me/yourname"; // user will swap
+const PAYPAL_URL = "https://www.wellgather.com?utm_source=website&utm_medium=web&utm_campaign=marlaramoswebsite&utm_id=mramos&utm_term=mmwebsite"; // user will swap
 
 const slides = [
   { src: retreat, title: "Coastal Retreats", desc: "Five-day immersions on the edge of the sea." },
