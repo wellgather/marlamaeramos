@@ -61,7 +61,7 @@ const WellnessExperience = () => (
     <section className="container py-16">
       <div className="max-w-3xl mx-auto">
         <p className="text-xs uppercase tracking-[0.3em] text-primary mb-3 text-center">The offering</p>
-        <h2 className="font-display text-4xl md:text-5xl mb-12 text-center">The Formula to Your Transrmative Wellness Offering</h2>
+        <h2 className="font-display text-4xl md:text-5xl mb-12 text-center">The Formula to Your Irresistible & Transformative Wellness Offering </h2>
         <Accordion type="single" collapsible className="space-y-3">
           {[
             { q: "Building a Repeat Wellness Community", a: "Six weeks of breathwork, somatic practice, and nervous system regulation. We build the floor on which everything else stands." },
