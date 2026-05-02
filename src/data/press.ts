@@ -35,7 +35,7 @@ export const ARTICLES: {
   image: string;
 }[] = [
   { title: "Wellness Reimagined: 5 Things to Reform the Wellness Industry", source: "MEDIUM", date: "Mar 2026", url: "#", image: article1 },
-  { title: "How Sound Healing Reaches Where Words Can't", source: "Well+Good", date: "Jan 2025", url: "#", image: article2 },
+  { title: "Special Episode: wmnsWORK Demo Day", source: "SOUL OF TRAVEL PODCAST", date: "Sep 2025", url: "#", image: article2 },
   { title: "A New Definition of Self-Care", source: "Goop", date: "Nov 2024", url: "#", image: article3 },
   { title: "Inside The Coastal Retreat Changing Lives", source: "Harper's Bazaar", date: "Sep 2024", url: "#", image: article4 },
   { title: "Why Breathwork Is the Next Therapy", source: "Forbes", date: "Jun 2024", url: "#", image: article5 },
