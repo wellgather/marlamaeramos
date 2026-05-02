@@ -122,11 +122,11 @@ export const Header = () => {
                 <img src={portrait} alt="Marla Ramos" className="w-32 h-32 rounded-full mx-auto object-cover ring-4 ring-primary-soft" />
                 <div className="text-center space-y-2">
                   <h2 className="font-display text-3xl">Marla Ramos</h2>
-                  <p className="text-sm text-muted-foreground uppercase tracking-widest">Wellness Expert · Coach · Guide</p>
+                  <p className="text-sm text-muted-foreground uppercase tracking-widest">Wellness Travel Consultant</p>
                 </div>
                 <div className="space-y-4 text-foreground/80 leading-relaxed">
-                  <p>For over a decade, I've guided people back to themselves — through breath, movement, sound, and ceremony.</p>
-                  <p>My work blends ancient practice with modern coaching, offering a path that meets you where you are and walks with you toward clarity, vitality, and ease.</p>
+                  <p>Marla Ramos is a Certified Wellness Travel Specialist and Wellness Experience Consultant who designs and builds systems and strategies for transformative experiences that create real impact. With years of expertise in regenerative tourism, luxury hospitality, and wellness startups, she brings together strategic systems, global insight, and lived immersion to create experiences that are both meaningful and scalable. As the Philippine Co-Ambassador for World Wellness Weekend, she is at the forefront of the wellness travel movement, shaping how modern travelers discover, experience, and share wellness worldwide.</p>
+                  <p>She is also an energy-led consultant who builds businesses and strategies calibrated at a high frequency, with the intention of creating positive impact in the healing of people and the planet, bringing a distinct depth and caliber to her expertise.</p>
                 </div>
                 <Button variant="coral" className="w-full" onClick={() => setAboutOpen(false)} asChild>
                   <Link to="/wellness-experience">Work With Me</Link>
