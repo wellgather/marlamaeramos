@@ -135,7 +135,7 @@ const Home = () => (
       <div className="max-w-2xl mx-auto text-center mb-14">
         <p className="text-xs uppercase tracking-[0.3em] text-primary mb-4">MY PHILOSOPHY</p>
         <h2 className="font-display text-4xl md:text-5xl leading-tight mb-5">
-          Wellness isn't a destination. It's a <em className="text-primary not-italic">remembering.</em>
+          Wellness isn't a destination. It's an <em className="text-primary not-italic">experience.</em>
         </h2>
         <p className="text-base md:text-lg text-foreground/70 leading-relaxed">
           We slow down, we listen, and we let your body lead. The shifts that follow are quiet —
