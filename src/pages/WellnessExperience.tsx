@@ -105,7 +105,7 @@ const WellnessExperience = () => (
     {/* HERO PRICE FOOTER */}
     <section className="container pb-24">
       <div className="relative overflow-hidden rounded-3xl bg-gradient-coral p-12 md:p-20 text-primary-foreground text-center">
-        <span className="inline-block text-xs uppercase tracking-[0.3em] mb-4 opacity-80">The investment</span>
+        <span className="inline-block text-xs uppercase tracking-[0.3em] mb-4 opacity-80 font-extrabold">THE INVESTMENT</span>
         <h2 className="font-display text-4xl md:text-6xl mb-3 leading-tight">
           A complete 1-month container
         </h2>
