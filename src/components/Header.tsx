@@ -41,7 +41,7 @@ export const Header = () => {
       <div className="container relative flex items-center justify-between h-20">
         <div className="flex items-center gap-3">
           <Link to="/" className="font-display text-xl tracking-tight">
-            Aria <span className="text-primary">·</span> Wellness
+            Marla Ramos
           </Link>
           <Button
             variant="coral"
