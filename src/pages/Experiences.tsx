@@ -36,7 +36,7 @@ const Experiences = () => {
                 <a href={PAYPAL_URL} target="_blank" rel="noreferrer">Find Wellness Activities Near You →</a>
               </Button>
             </div>
-            <p className="text-xs text-muted-foreground">Limited spaces · Worldwide locations</p>
+            <p className="text-xs text-muted-foreground">Unique wellness experiences · Worldwide locations</p>
           </motion.div>
         </div>
       </section>
