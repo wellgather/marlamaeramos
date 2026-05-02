@@ -1,20 +1,40 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react";
+import { Menu, ChevronDown } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import portrait from "@/assets/portrait.jpg";
 
-const navItems = [
-  { to: "/courses", label: "Courses" },
-  { to: "/consultancy", label: "Consultancy" },
-  { to: "/experiences", label: "Experiences" },
+const consultancyChildren = [
+  {
+    to: "/wellness-experience",
+    label: "Design Your Wellness Experience",
+    sub: "For brands & private clients",
+  },
+  {
+    to: "/hospitality",
+    label: "Get Wellness Certified",
+    sub: "For hotels & resorts",
+  },
 ];
+
+const linkClass = (active: boolean) =>
+  `relative px-5 py-2 text-sm font-medium transition-colors rounded-full inline-flex items-center gap-1 ${
+    active ? "text-primary" : "text-foreground/70 hover:text-foreground"
+  }`;
 
 export const Header = () => {
   const [aboutOpen, setAboutOpen] = useState(false);
+  const location = useLocation();
+  const consultancyActive = consultancyChildren.some(c => location.pathname.startsWith(c.to));
 
   return (
     <header className="sticky top-0 z-40 w-full">
@@ -25,30 +45,51 @@ export const Header = () => {
         </Link>
 
         <nav className="hidden md:flex items-center gap-1">
-          {navItems.map(item => (
-            <NavLink
-              key={item.to}
-              to={item.to}
-              className={({ isActive }) =>
-                `relative px-5 py-2 text-sm font-medium transition-colors rounded-full ${
-                  isActive ? "text-primary" : "text-foreground/70 hover:text-foreground"
-                }`
-              }
-            >
-              {({ isActive }) => (
-                <>
-                  {item.label}
-                  {isActive && (
-                    <motion.div
-                      layoutId="nav-pill"
-                      className="absolute inset-0 bg-primary-soft rounded-full -z-10"
-                      transition={{ type: "spring", stiffness: 400, damping: 30 }}
-                    />
-                  )}
-                </>
-              )}
-            </NavLink>
-          ))}
+          <NavLink to="/courses" className={({ isActive }) => linkClass(isActive)}>
+            {({ isActive }) => (
+              <>
+                Courses
+                {isActive && (
+                  <motion.div layoutId="nav-pill" className="absolute inset-0 bg-primary-soft rounded-full -z-10" transition={{ type: "spring", stiffness: 400, damping: 30 }} />
+                )}
+              </>
+            )}
+          </NavLink>
+
+          {/* Consultancy = non-clickable parent w/ dropdown */}
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <button type="button" className={linkClass(consultancyActive)}>
+                Consultancy <ChevronDown className="w-3.5 h-3.5 opacity-70" />
+                {consultancyActive && (
+                  <motion.div layoutId="nav-pill" className="absolute inset-0 bg-primary-soft rounded-full -z-10" transition={{ type: "spring", stiffness: 400, damping: 30 }} />
+                )}
+              </button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="center" className="w-80 p-2 rounded-2xl shadow-soft border-border/60">
+              {consultancyChildren.map(c => (
+                <DropdownMenuItem key={c.to} asChild className="rounded-xl p-3 cursor-pointer focus:bg-primary-soft/60">
+                  <Link to={c.to}>
+                    <div>
+                      <div className="font-display text-base text-foreground">{c.label}</div>
+                      <div className="text-xs text-muted-foreground mt-0.5">{c.sub}</div>
+                    </div>
+                  </Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+
+          <NavLink to="/experiences" className={({ isActive }) => linkClass(isActive)}>
+            {({ isActive }) => (
+              <>
+                Experiences
+                {isActive && (
+                  <motion.div layoutId="nav-pill" className="absolute inset-0 bg-primary-soft rounded-full -z-10" transition={{ type: "spring", stiffness: 400, damping: 30 }} />
+                )}
+              </>
+            )}
+          </NavLink>
         </nav>
 
         <div className="flex items-center gap-2">
@@ -69,40 +110,11 @@ export const Header = () => {
                   <p className="text-sm text-muted-foreground uppercase tracking-widest">Wellness Expert · Coach · Guide</p>
                 </div>
                 <div className="space-y-4 text-foreground/80 leading-relaxed">
-                  <p>
-                    For over a decade, I've guided people back to themselves — through breath, movement,
-                    sound, and ceremony.
-                  </p>
-                  <p>
-                    My work blends ancient practice with modern coaching, offering a path that meets you
-                    where you are and walks with you toward clarity, vitality, and ease.
-                  </p>
-                  <p>
-                    Whether you're seeking 1:1 consultation, deepening through a course, or joining a retreat,
-                    every offering is built on one belief: <em className="text-primary not-italic">your body already knows the way home.</em>
-                  </p>
+                  <p>For over a decade, I've guided people back to themselves — through breath, movement, sound, and ceremony.</p>
+                  <p>My work blends ancient practice with modern coaching, offering a path that meets you where you are and walks with you toward clarity, vitality, and ease.</p>
                 </div>
-                <div className="grid grid-cols-3 gap-3 pt-4 border-t border-border">
-                  <div className="text-center">
-                    <div className="font-display text-2xl text-primary">10+</div>
-                    <div className="text-xs text-muted-foreground">Years</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="font-display text-2xl text-primary">2K+</div>
-                    <div className="text-xs text-muted-foreground">Clients</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="font-display text-2xl text-primary">40+</div>
-                    <div className="text-xs text-muted-foreground">Retreats</div>
-                  </div>
-                </div>
-                <Button
-                  variant="coral"
-                  className="w-full"
-                  onClick={() => setAboutOpen(false)}
-                  asChild
-                >
-                  <Link to="/consultancy">Work With Me</Link>
+                <Button variant="coral" className="w-full" onClick={() => setAboutOpen(false)} asChild>
+                  <Link to="/wellness-experience">Work With Me</Link>
                 </Button>
               </div>
             </SheetContent>
@@ -115,16 +127,19 @@ export const Header = () => {
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="bg-background">
-              <nav className="flex flex-col gap-2 pt-12">
-                {navItems.map(item => (
-                  <Link
-                    key={item.to}
-                    to={item.to}
-                    className="font-display text-3xl py-2 hover:text-primary transition-colors"
-                  >
-                    {item.label}
-                  </Link>
-                ))}
+              <nav className="flex flex-col gap-1 pt-12">
+                <Link to="/courses" className="font-display text-3xl py-2 hover:text-primary transition-colors">Courses</Link>
+                <div className="pt-2">
+                  <div className="font-display text-3xl text-foreground/90">Consultancy</div>
+                  <div className="pl-4 mt-2 space-y-2 border-l border-border">
+                    {consultancyChildren.map(c => (
+                      <Link key={c.to} to={c.to} className="block text-base hover:text-primary transition-colors">
+                        {c.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+                <Link to="/experiences" className="font-display text-3xl py-2 hover:text-primary transition-colors mt-2">Experiences</Link>
               </nav>
             </SheetContent>
           </Sheet>
