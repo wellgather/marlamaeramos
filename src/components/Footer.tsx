@@ -1,4 +1,19 @@
 import { Link } from "react-router-dom";
+import { Linkedin, Instagram, Mail } from "lucide-react";
+
+// TikTok isn't in lucide — small inline SVG
+const TikTokIcon = ({ className = "" }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-hidden="true">
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.93a8.17 8.17 0 0 0 4.79 1.52V7a4.83 4.83 0 0 1-1.86-.31z"/>
+  </svg>
+);
+
+const socials = [
+  { href: "https://www.linkedin.com/in/marlaramos/", label: "LinkedIn", Icon: Linkedin },
+  { href: "https://www.instagram.com/marlameyy/", label: "Instagram", Icon: Instagram },
+  { href: "https://www.tiktok.com/@marlameyy", label: "TikTok", Icon: TikTokIcon },
+  { href: "mailto:marlamae_ramos@yahoo.com", label: "Email", Icon: Mail },
+];
 
 export const Footer = () => (
   <footer className="mt-24 border-t border-border/40 bg-gradient-soft">
@@ -8,6 +23,20 @@ export const Footer = () => (
         <p className="text-sm text-muted-foreground max-w-xs">
           A path back to your body. A practice toward your truest self.
         </p>
+        <div className="flex items-center gap-3 mt-5">
+          {socials.map(({ href, label, Icon }) => (
+            <a
+              key={label}
+              href={href}
+              target={href.startsWith("mailto:") ? undefined : "_blank"}
+              rel={href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
+              aria-label={label}
+              className="w-10 h-10 rounded-full bg-white border border-border/40 shadow-card flex items-center justify-center text-foreground/70 hover:text-primary hover:shadow-soft transition-all"
+            >
+              <Icon className="w-4 h-4" />
+            </a>
+          ))}
+        </div>
       </div>
       <div>
         <div className="text-xs uppercase tracking-widest text-muted-foreground mb-3">Explore</div>
@@ -20,7 +49,9 @@ export const Footer = () => (
       </div>
       <div>
         <div className="text-xs uppercase tracking-widest text-muted-foreground mb-3">Contact</div>
-        <p className="text-sm text-muted-foreground">hello@aria-wellness.com</p>
+        <a href="mailto:marlamae_ramos@yahoo.com" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+          marlamae_ramos@yahoo.com
+        </a>
         <p className="text-sm text-muted-foreground mt-1">By appointment, worldwide</p>
       </div>
     </div>

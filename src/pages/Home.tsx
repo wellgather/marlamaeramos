@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles, Leaf, HeartHandshake, Compass, Calendar, MapPin } from "lucide-react";
 import { PressMarquee } from "@/components/PressMarquee";
 import { ArticlesGrid } from "@/components/ArticlesGrid";
 import { CallbackForm } from "@/components/CallbackForm";
+import { AFFILIATIONS } from "@/data/affiliations";
+import { UPCOMING_EXPERIENCES } from "@/data/experiences";
 import heroSunset from "@/assets/hero-sunset.jpg";
 
 const ctas = [
@@ -33,10 +35,28 @@ const ctas = [
   },
 ];
 
+const pillars = [
+  {
+    icon: Leaf,
+    title: "Rooted in Practice",
+    desc: "Ancient traditions meet modern coaching.",
+  },
+  {
+    icon: HeartHandshake,
+    title: "Personal & Present",
+    desc: "Designed around you — never one-size-fits-all.",
+  },
+  {
+    icon: Compass,
+    title: "A Path that Lasts",
+    desc: "Quiet shifts that stay with you for years.",
+  },
+];
+
 const Home = () => (
   <>
     {/* HERO — full-bleed featured image with overlay form */}
-    <section className="relative">
+    <section className="relative pb-28 md:pb-32">
       <div className="relative w-full h-[78vh] min-h-[560px] md:h-[88vh] overflow-hidden">
         <img
           src={heroSunset}
@@ -46,13 +66,11 @@ const Home = () => (
           height={1080}
           fetchPriority="high"
         />
-        {/* Soft warm wash to keep brand cohesion */}
         <div className="absolute inset-0 bg-gradient-to-r from-background/40 via-transparent to-background/30" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/95" />
 
-        <div className="container relative h-full flex items-end md:items-center pt-24 pb-32 md:py-16">
+        <div className="container relative h-full flex items-end md:items-center pt-24 pb-16 md:py-16">
           <div className="grid md:grid-cols-2 gap-10 w-full items-center">
-            {/* Headline */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -72,7 +90,6 @@ const Home = () => (
               </p>
             </motion.div>
 
-            {/* Callback form */}
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
@@ -89,12 +106,13 @@ const Home = () => (
         </div>
       </div>
 
-      {/* Overlapping CTA cards — small, tight shadows */}
-      <div className="container -mt-20 md:-mt-24 relative z-10">
+      {/* Overlapping CTA cards — sit BELOW the hero, slightly overlapping the bottom edge */}
+      <div className="container -mt-16 md:-mt-20 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.4 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
           className="grid sm:grid-cols-3 gap-4 max-w-5xl mx-auto"
         >
           {ctas.map(c => (
@@ -115,38 +133,123 @@ const Home = () => (
       </div>
     </section>
 
-    <PressMarquee />
+    {/* PHILOSOPHY — short description + 3 icon pillars (vector-style trio) */}
+    <section className="container py-20 md:py-28">
+      <div className="max-w-2xl mx-auto text-center mb-14">
+        <p className="text-xs uppercase tracking-[0.3em] text-primary mb-4">The philosophy</p>
+        <h2 className="font-display text-4xl md:text-5xl leading-tight mb-5">
+          Wellness isn't a destination. It's a <em className="text-primary not-italic">remembering.</em>
+        </h2>
+        <p className="text-base md:text-lg text-foreground/70 leading-relaxed">
+          We slow down, we listen, and we let your body lead. The shifts that follow are quiet —
+          but they are real, and they last.
+        </p>
+      </div>
 
-    {/* PHILOSOPHY */}
-    <section className="container py-24 md:py-32">
-      <div className="grid md:grid-cols-2 gap-16 items-center">
-        <div>
-          <p className="text-xs uppercase tracking-[0.3em] text-primary mb-4">The philosophy</p>
-          <h2 className="font-display text-4xl md:text-5xl leading-tight mb-6">
-            Wellness isn't a destination. It's a <em className="text-primary not-italic">remembering.</em>
-          </h2>
-          <p className="text-lg text-foreground/70 leading-relaxed mb-8">
-            For too long, healing has been sold as something you must chase. My approach is different.
-            We slow down, we listen, and we let your body lead. The shifts that follow are quiet — but
-            they are real, and they last.
+      <div className="grid md:grid-cols-3 gap-8 md:gap-12 max-w-5xl mx-auto">
+        {pillars.map((p, i) => (
+          <motion.div
+            key={p.title}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: i * 0.1 }}
+            className="text-center"
+          >
+            <div className="mx-auto w-20 h-20 rounded-full bg-primary-soft flex items-center justify-center mb-5 shadow-soft">
+              <p.icon className="w-9 h-9 text-primary" strokeWidth={1.4} />
+            </div>
+            <h3 className="font-display text-xl mb-2">{p.title}</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
+          </motion.div>
+        ))}
+      </div>
+    </section>
+
+    {/* UPCOMING EXPERIENCES — modeled after pilates "Our Sessions" banner */}
+    <section className="bg-gradient-soft border-y border-border/40 py-20 md:py-28">
+      <div className="container">
+        <div className="text-center mb-14 max-w-2xl mx-auto">
+          <p className="text-xs uppercase tracking-[0.3em] text-primary mb-3">Join us in person</p>
+          <h2 className="font-display text-4xl md:text-5xl leading-tight">Upcoming Experiences</h2>
+          <p className="text-foreground/70 mt-4">
+            Intimate retreats, summits, and sound journeys — crafted for the soul.
           </p>
         </div>
-        <div className="grid grid-cols-2 gap-4">
-          {[
-            { stat: "98%", label: "Clients report deeper rest" },
-            { stat: "10+", label: "Years guiding" },
-            { stat: "2K+", label: "Lives touched" },
-            { stat: "40+", label: "Retreats led" },
-          ].map(s => (
-            <div key={s.label} className="aspect-square rounded-3xl bg-gradient-soft border border-border/40 p-6 flex flex-col justify-between shadow-card">
-              <div className="font-display text-5xl text-primary">{s.stat}</div>
-              <div className="text-sm text-muted-foreground">{s.label}</div>
-            </div>
+
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+          {UPCOMING_EXPERIENCES.map((e, i) => (
+            <motion.article
+              key={e.title}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: i * 0.1 }}
+              className="group rounded-3xl overflow-hidden bg-white shadow-card hover:shadow-coral transition-all hover:-translate-y-1"
+            >
+              <div className="relative aspect-[4/5] overflow-hidden">
+                <img
+                  src={e.image}
+                  alt={e.title}
+                  loading="lazy"
+                  width={1024}
+                  height={1280}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                <div className="absolute top-4 left-4">
+                  <span className="text-[10px] uppercase tracking-widest bg-white/90 text-primary px-3 py-1.5 rounded-full">
+                    {e.type}
+                  </span>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                  <h3 className="font-display text-2xl leading-tight mb-2">{e.title}</h3>
+                  <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs opacity-95">
+                    <span className="inline-flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5" /> {e.date}</span>
+                    <span className="inline-flex items-center gap-1.5"><MapPin className="w-3.5 h-3.5" /> {e.location}</span>
+                  </div>
+                </div>
+              </div>
+            </motion.article>
           ))}
+        </div>
+
+        <div className="text-center mt-10">
+          <Link
+            to="/experiences"
+            className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:gap-3 transition-all"
+          >
+            View all experiences <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       </div>
     </section>
 
+    {/* AFFILIATIONS */}
+    <section className="container py-16 md:py-20">
+      <div className="text-center mb-10">
+        <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-3">Affiliations</p>
+        <h2 className="font-display text-3xl md:text-4xl">Trusted partners & accreditations</h2>
+      </div>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 max-w-5xl mx-auto">
+        {AFFILIATIONS.map(a => (
+          <div
+            key={a.name}
+            className="aspect-[3/2] rounded-2xl bg-white border border-border/40 shadow-card flex items-center justify-center p-4 hover:shadow-soft transition-shadow"
+          >
+            {a.logo ? (
+              <img src={a.logo} alt={a.name} className="max-h-12 w-auto opacity-80" loading="lazy" />
+            ) : (
+              <span className="font-display text-base md:text-lg text-foreground/60 text-center tracking-wide">
+                {a.name}
+              </span>
+            )}
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <PressMarquee />
     <ArticlesGrid />
   </>
 );
