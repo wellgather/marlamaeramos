@@ -107,7 +107,7 @@ const Home = () => (
       </div>
 
       {/* Overlapping CTA cards — sit BELOW the hero, slightly overlapping the bottom edge */}
-      <div className="container -mt-16 md:-mt-20 relative z-10">
+      <div className="container mt-12 md:mt-20 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
