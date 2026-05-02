@@ -138,8 +138,7 @@ const Home = () => (
           True wellness is found in the <em className="text-primary not-italic">experience.</em>
         </h2>
         <p className="text-base md:text-lg text-foreground/70 leading-relaxed">
-          We slow down, we listen, and we let your body lead. The shifts that follow are quiet —
-          but they are real, and they last.
+          Discover how thoughtfully designed, expert-led wellness experience can transform your brand, deepen connection, and grow your community.
         </p>
       </div>
 
