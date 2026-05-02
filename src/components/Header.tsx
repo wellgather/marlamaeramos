@@ -16,7 +16,7 @@ import portrait from "@/assets/portrait.jpg";
 const consultancyChildren = [
   {
     to: "/wellness-experience",
-    label: "Let's Design Your Wellness Experiences",
+    label: "Design Your Wellness Experiences",
     sub: "For brands & private clients",
   },
   {
