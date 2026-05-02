@@ -56,7 +56,7 @@ const pillars = [
 const Home = () => (
   <>
     {/* HERO — full-bleed featured image with overlay form */}
-    <section className="relative pb-44 md:pb-56">
+    <section className="relative pb-8 md:pb-12">
       <div className="relative w-full h-[78vh] min-h-[560px] md:h-[88vh] overflow-hidden">
         <img
           src={heroSunset}
