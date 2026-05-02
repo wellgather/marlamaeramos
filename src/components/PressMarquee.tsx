@@ -5,7 +5,7 @@ export const PressMarquee = () => {
   return (
     <section className="py-12 border-y border-border/40 bg-white/40">
       <p className="text-center text-xs uppercase tracking-[0.3em] text-muted-foreground mb-8">
-        Affiliations and As seen on
+        AS SEEN ON AND AFFILIATIONS
       </p>
       <div className="marquee">
         <div className="marquee-track">
