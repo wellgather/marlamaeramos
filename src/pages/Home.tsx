@@ -20,7 +20,7 @@ const ctas = [
     to: "/hospitality",
     eyebrow: "For hotels & resorts",
     title: "Get Wellness Certified",
-    desc: "WITT-aligned audits & certification path.",
+    desc: "Support to create transformative wellness retreats & experiences.",
     style: "bg-white border border-border/40 shadow-card",
     arrowClass: "text-primary",
   },
