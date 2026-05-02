@@ -2,10 +2,9 @@ import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Check, Sparkles, Calendar, MessageCircle, Heart } from "lucide-react";
 import { motion } from "framer-motion";
+import { CALENDAR_URL } from "@/data/hospitality";
 
-const PAYPAL_URL = "https://paypal.me/yourname"; // user will swap
-
-const Consultancy = () => (
+const WellnessExperience = () => (
   <>
     {/* HERO */}
     <section className="relative overflow-hidden bg-gradient-hero">
@@ -18,15 +17,15 @@ const Consultancy = () => (
             <Sparkles className="w-3 h-3" /> 1:1 Consultancy
           </span>
           <h1 className="font-display text-5xl md:text-7xl leading-[1.05]">
-            The work that <em className="text-primary not-italic">changes everything.</em>
+            Let's design your <em className="text-primary not-italic">wellness experience.</em>
           </h1>
           <p className="text-lg md:text-xl text-foreground/70 max-w-2xl mx-auto leading-relaxed">
-            A guided journey, designed for you alone — to soften the patterns, deepen the breath,
+            A guided journey designed for you alone — to soften the patterns, deepen the breath,
             and finally meet the version of you that's been waiting underneath.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center pt-4">
             <Button variant="coral" size="xl" asChild>
-              <a href={PAYPAL_URL} target="_blank" rel="noreferrer">Book a Discovery Call</a>
+              <a href={CALENDAR_URL} target="_blank" rel="noreferrer">Book a Discovery Call</a>
             </Button>
             <Button variant="cream" size="xl" asChild>
               <a href="#offer">See what's included</a>
@@ -89,14 +88,11 @@ const Consultancy = () => (
       </div>
     </section>
 
-    {/* TESTIMONIALS — empty placeholder structure (no fake reviews) */}
+    {/* TESTIMONIALS */}
     <section className="container py-24">
       <div className="text-center mb-12">
         <p className="text-xs uppercase tracking-[0.3em] text-primary mb-3">Testimonials</p>
         <h2 className="font-display text-4xl md:text-5xl">Words from the work</h2>
-        <p className="text-muted-foreground mt-3 max-w-xl mx-auto">
-          Real reflections from real clients. (Add your testimonials here.)
-        </p>
       </div>
       <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
         {[1, 2, 3].map(i => (
@@ -107,28 +103,31 @@ const Consultancy = () => (
       </div>
     </section>
 
-    {/* INVESTMENT / FINAL CTA */}
+    {/* HERO PRICE FOOTER */}
     <section className="container pb-24">
       <div className="relative overflow-hidden rounded-3xl bg-gradient-coral p-12 md:p-20 text-primary-foreground text-center">
         <span className="inline-block text-xs uppercase tracking-[0.3em] mb-4 opacity-80">The investment</span>
-        <h2 className="font-display text-4xl md:text-6xl mb-6 leading-tight">
-          Your one life is asking.
+        <h2 className="font-display text-4xl md:text-6xl mb-3 leading-tight">
+          A complete 3-month container
         </h2>
-        <p className="text-lg opacity-90 max-w-xl mx-auto mb-10">
-          Spaces are intentionally limited. Begin with a complimentary discovery call —
-          no pressure, just presence.
-        </p>
+        <div className="flex items-end justify-center gap-2 mb-2">
+          <span className="font-display text-6xl md:text-7xl">$4,500</span>
+          <span className="text-sm opacity-70 mb-3">USD</span>
+        </div>
+        <p className="text-sm opacity-80 mb-8">or 3 monthly payments of $1,600</p>
+
         <ul className="grid sm:grid-cols-2 gap-3 max-w-md mx-auto mb-10 text-left text-sm">
           {["12 private sessions", "Daily voice support", "Custom practice library", "Closing ceremony"].map(f => (
             <li key={f} className="flex items-center gap-2"><Check className="w-4 h-4" /> {f}</li>
           ))}
         </ul>
         <Button variant="cream" size="xl" asChild>
-          <a href={PAYPAL_URL} target="_blank" rel="noreferrer">Book Discovery Call →</a>
+          <a href={CALENDAR_URL} target="_blank" rel="noreferrer">Book Discovery Call →</a>
         </Button>
+        <p className="text-xs opacity-70 mt-4">Spaces are intentionally limited.</p>
       </div>
     </section>
   </>
 );
 
-export default Consultancy;
+export default WellnessExperience;
