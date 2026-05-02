@@ -95,6 +95,41 @@ const Experiences = () => {
         </div>
       </section>
 
+      {/* INSTAGRAM — join the social wellness movement */}
+      <section className="container pt-8 pb-20">
+        <div className="rounded-3xl overflow-hidden bg-gradient-soft border border-border/40 shadow-card p-8 md:p-14">
+          <div className="text-center max-w-2xl mx-auto mb-10">
+            <p className="text-xs uppercase tracking-[0.3em] text-primary mb-3">@wellgather</p>
+            <h2 className="font-display text-4xl md:text-5xl leading-tight mb-4">
+              Join the social <em className="text-primary not-italic">wellness movement.</em>
+            </h2>
+            <p className="text-foreground/70">
+              Daily rituals, retreat moments, and reflections — straight from our community.
+            </p>
+          </div>
+
+          <div className="max-w-md mx-auto rounded-2xl overflow-hidden bg-white shadow-soft border border-border/40">
+            <iframe
+              src="https://www.instagram.com/wellgather/embed"
+              title="Wellgather on Instagram"
+              loading="lazy"
+              className="w-full"
+              style={{ height: 720, border: 0 }}
+              scrolling="no"
+              allowTransparency
+            />
+          </div>
+
+          <div className="text-center mt-8">
+            <Button variant="coral" size="lg" asChild>
+              <a href="https://www.instagram.com/wellgather" target="_blank" rel="noopener noreferrer">
+                Follow @wellgather on Instagram
+              </a>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* FINAL CTA */}
       <section className="container pb-24">
         <div className="relative overflow-hidden rounded-3xl bg-gradient-coral p-12 md:p-20 text-primary-foreground text-center">
