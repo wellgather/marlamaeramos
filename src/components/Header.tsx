@@ -40,9 +40,25 @@ export const Header = () => {
     <header className="sticky top-0 z-40 w-full">
       <div className="absolute inset-0 backdrop-blur-xl bg-background/70 border-b border-border/40" />
       <div className="container relative flex items-center justify-between h-20">
-        <Link to="/" className="font-display text-xl tracking-tight">
-          Aria <span className="text-primary">·</span> Wellness
-        </Link>
+        <div className="flex items-center gap-3">
+          <Link to="/" className="font-display text-xl tracking-tight">
+            Aria <span className="text-primary">·</span> Wellness
+          </Link>
+          <Button
+            variant="coral"
+            size="sm"
+            asChild
+            className="hidden sm:inline-flex rounded-full shadow-soft"
+          >
+            <a
+              href="https://calendar.notion.so/meet/marlaramos/wellgather"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Book a Call
+            </a>
+          </Button>
+        </div>
 
         <nav className="hidden md:flex items-center gap-1">
           <NavLink to="/courses" className={({ isActive }) => linkClass(isActive)}>
