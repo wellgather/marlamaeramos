@@ -95,7 +95,7 @@ const Home = () => (
             >
               <CallbackForm
                 title="Begin Your Transformation"
-                subtitle="Tell me a little about you — I'll personally reach out."
+                subtitle="Tell me a little about you, I'll personally reach out."
                 cta="Request a Callback"
               />
             </motion.div>
