@@ -115,7 +115,7 @@ const Experiences = () => {
       <section className="container py-6">
         <div className="rounded-2xl bg-secondary px-6 py-6 md:px-10 md:py-7 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="font-display text-2xl md:text-3xl text-secondary-foreground text-center md:text-left">
-            Book Marla for a Wellness Retreat
+            Interested in Collaborating with Marla for a Wellness Gathering?
           </p>
           <Button variant="coral" size="lg" asChild>
             <a href={CALENDAR_URL} target="_blank" rel="noreferrer">Collaborate</a>
