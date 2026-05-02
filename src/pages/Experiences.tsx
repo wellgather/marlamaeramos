@@ -15,9 +15,9 @@ import collage6 from "@/assets/collage-6.jpg";
 const PAYPAL_URL = "https://www.wellgather.com?utm_source=website&utm_medium=web&utm_campaign=marlaramoswebsite&utm_id=mramos&utm_term=mmwebsite"; // user will swap
 
 const slides = [
-  { src: retreat, title: "Coastal Retreats", desc: "Five-day immersions on the edge of the sea." },
-  { src: soundHealing, title: "Sound Healing", desc: "Crystal bowls, voice, and frequency journeys." },
-  { src: yoga, title: "Movement & Breath", desc: "Sunrise sessions to wake the body gently." },
+  { src: retreat, title: "Coastal Retreats", desc: "Five-day immersions on the edge of the sea.", url: "https://www.wellgather.com" },
+  { src: soundHealing, title: "Sound Healing", desc: "Crystal bowls, voice, and frequency journeys.", url: "https://www.wellgather.com" },
+  { src: yoga, title: "Movement & Breath", desc: "Sunrise sessions to wake the body gently.", url: "https://www.wellgather.com" },
 ];
 
 const Experiences = () => {
@@ -63,13 +63,17 @@ const Experiences = () => {
         <div className="relative max-w-5xl mx-auto">
           <div className="relative aspect-[16/10] rounded-3xl overflow-hidden shadow-coral bg-secondary">
             <AnimatePresence mode="wait">
-              <motion.div
+              <motion.a
                 key={i}
+                href={slides[i].url}
+                target="_blank"
+                rel="noopener noreferrer"
                 initial={{ opacity: 0, scale: 1.05 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.8 }}
-                className="absolute inset-0"
+                className="absolute inset-0 block cursor-pointer"
+                aria-label={`Learn more about ${slides[i].title}`}
               >
                 <img src={slides[i].src} alt={slides[i].title} className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
@@ -77,7 +81,7 @@ const Experiences = () => {
                   <h3 className="font-display text-3xl md:text-5xl mb-2">{slides[i].title}</h3>
                   <p className="text-base md:text-lg opacity-90 max-w-md">{slides[i].desc}</p>
                 </div>
-              </motion.div>
+              </motion.a>
             </AnimatePresence>
           </div>
 
@@ -122,7 +126,7 @@ const Experiences = () => {
       </section>
 
       {/* INSTAGRAM COLLAGE — minimalist 6-image strip */}
-      <section className="container pt-4 pb-24">
+      <section className="container pt-4 pb-8">
         <a
           href="https://www.instagram.com/wellgather"
           target="_blank"
