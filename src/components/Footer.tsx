@@ -21,7 +21,7 @@ export const Footer = () => (
     <div className="bg-gradient-coral text-primary-foreground">
       <div className="container py-4 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-center">
         <p className="text-sm sm:text-base font-medium tracking-wide">
-          Join the community
+          Join the social wellness community
         </p>
         <Button
           variant="cream"
