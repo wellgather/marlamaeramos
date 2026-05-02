@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Linkedin, Instagram, Mail } from "lucide-react";
+import { Linkedin, Instagram, Mail, Youtube } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 // TikTok isn't in lucide — small inline SVG
 const TikTokIcon = ({ className = "" }: { className?: string }) => (
@@ -12,11 +13,34 @@ const socials = [
   { href: "https://www.linkedin.com/in/marlaramos/", label: "LinkedIn", Icon: Linkedin },
   { href: "https://www.instagram.com/marlameyy/", label: "Instagram", Icon: Instagram },
   { href: "https://www.tiktok.com/@marlameyy", label: "TikTok", Icon: TikTokIcon },
+  { href: "#", label: "YouTube", Icon: Youtube },
   { href: "mailto:marlamae_ramos@yahoo.com", label: "Email", Icon: Mail },
 ];
 
 export const Footer = () => (
   <footer className="mt-24 border-t border-border/40 bg-gradient-soft">
+    {/* Community banner — slim, theme-colored */}
+    <div className="bg-gradient-coral text-primary-foreground">
+      <div className="container py-4 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-center">
+        <p className="text-sm sm:text-base font-medium tracking-wide">
+          Join the community
+        </p>
+        <Button
+          variant="cream"
+          size="sm"
+          asChild
+          className="rounded-full"
+        >
+          <a
+            href="https://www.tiktok.com/@marlameyy"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Follow
+          </a>
+        </Button>
+      </div>
+    </div>
     <div className="container py-12 grid md:grid-cols-3 gap-8">
       <div>
         <div className="font-display text-2xl mb-2">Aria · Wellness</div>
