@@ -2,6 +2,7 @@ import article1 from "@/assets/article-1.png";
 import article2 from "@/assets/article-2.png";
 import article3 from "@/assets/article-3.png";
 import article4 from "@/assets/article-4.png";
+import article5 from "@/assets/article-5.png";
 
 // Logos for "Affiliations and As seen on" carousel.
 // Replace `src` with the path to your uploaded logo image (e.g. "/logos/vogue.png"
@@ -29,5 +30,5 @@ export const ARTICLES: {
   { title: "How Sound Healing Reaches Where Words Can't", source: "Well+Good", date: "Jan 2025", url: "#", image: article2 },
   { title: "A New Definition of Self-Care", source: "Goop", date: "Nov 2024", url: "#", image: article3 },
   { title: "Inside The Coastal Retreat Changing Lives", source: "Harper's Bazaar", date: "Sep 2024", url: "#", image: article4 },
-  { title: "Why Breathwork Is the Next Therapy", source: "Forbes", date: "Jun 2024", url: "#", image: "/placeholder.svg" },
+  { title: "Why Breathwork Is the Next Therapy", source: "Forbes", date: "Jun 2024", url: "#", image: article5 },
 ];
