@@ -6,6 +6,9 @@ import { CallbackForm } from "@/components/CallbackForm";
 import { CALENDAR_URL, CREDENTIALS, PAIN_POINTS, TESTIMONIALS, TIERS } from "@/data/hospitality";
 import portrait from "@/assets/portrait.jpg";
 import heroSunset from "@/assets/hero-sunset.jpg";
+import logoWittAp from "@/assets/logo-witt-ap.png";
+import logoWittSpecialist from "@/assets/logo-witt-specialist.png";
+import logoWta from "@/assets/logo-wta.png";
 
 const Hospitality = () => {
   const [slide, setSlide] = useState(0);
@@ -133,13 +136,17 @@ const Hospitality = () => {
         <p className="text-center text-xs uppercase tracking-[0.3em] text-muted-foreground mb-8">
           Trusted by
         </p>
-        <div className="grid grid-cols-3 gap-4 md:gap-8 max-w-3xl mx-auto">
-          {[1, 2, 3].map(i => (
+        <div className="grid grid-cols-3 gap-4 md:gap-8 max-w-3xl mx-auto items-center">
+          {[
+            { src: logoWittAp, alt: "WITT Accredited Professional" },
+            { src: logoWittSpecialist, alt: "WITT Wellness Specialist" },
+            { src: logoWta, alt: "Wellness Travel Specialist — Wellness Tourism Association" },
+          ].map(logo => (
             <div
-              key={i}
-              className="aspect-[3/2] rounded-2xl bg-white border border-dashed border-border/60 flex items-center justify-center text-xs uppercase tracking-widest text-muted-foreground"
+              key={logo.alt}
+              className="aspect-[3/2] rounded-2xl bg-white border border-border/40 flex items-center justify-center p-4"
             >
-              Logo {i}
+              <img src={logo.src} alt={logo.alt} className="max-h-full max-w-full object-contain" loading="lazy" />
             </div>
           ))}
         </div>
