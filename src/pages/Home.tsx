@@ -133,7 +133,7 @@ const Home = () => (
     {/* PHILOSOPHY — short description + 3 icon pillars (vector-style trio) */}
     <section className="container py-12 md:py-16">
       <div className="max-w-2xl mx-auto text-center mb-14">
-        <p className="text-xs uppercase tracking-[0.3em] text-primary mb-4">The philosophy</p>
+        <p className="text-xs uppercase tracking-[0.3em] text-primary mb-4">MY PHILOSOPHY</p>
         <h2 className="font-display text-4xl md:text-5xl leading-tight mb-5">
           Wellness isn't a destination. It's a <em className="text-primary not-italic">remembering.</em>
         </h2>
