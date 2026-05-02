@@ -90,7 +90,7 @@ const Hospitality = () => {
             officially be <em className="text-primary not-italic">certified</em>?
           </p>
           <p className="mt-5 text-base text-foreground/70 leading-relaxed">
-            As a certified, official <strong className="text-foreground">WITT-Accredited Professional</strong>, I'm
+            As a certified, official <strong className="text-foreground">Certified WITT® Accredited Professional</strong>, I'm
             equipped with the expert knowledge you'll need to bring your wellness resort from now to certification.
             I'll guide you through the entire process — from auditing to certification, and from operational
             design to marketing the recognition you've earned.
