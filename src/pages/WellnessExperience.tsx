@@ -43,7 +43,7 @@ const WellnessExperience = () => (
       <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
         {[
           { icon: Calendar, title: "12 Weekly Sessions", desc: "Hour-long 1:1 calls, held in deep presence." },
-          { icon: MessageCircle, title: "Voice Note Support", desc: "Daily access to me between our sessions." },
+          { icon: MessageCircle, title: "Playbook", desc: "Daily access to me between our sessions." },
           { icon: Heart, title: "4 Weekly Sessions", desc: "Hour-long workshop held in deep presence." },
         ].map(item => (
           <div key={item.title} className="p-8 rounded-3xl bg-white border border-border/40 shadow-card">
