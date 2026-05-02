@@ -34,9 +34,8 @@ export const ARTICLES: {
   url: string;
   image: string;
 }[] = [
+  // To make a card clickable, set `url` to the destination link (e.g. "https://...").
   { title: "Wellness Reimagined: 5 Things to Reform the Wellness Industry", source: "MEDIUM", date: "Mar 2026", url: "#", image: article1 },
   { title: "Special Episode: wmnsWORK Demo Day", source: "SOUL OF TRAVEL PODCAST", date: "Sep 2025", url: "#", image: article2 },
   { title: "Philippines Celebrates First-Ever World Wellness Weekend", source: "WHEN IN MANILA", date: "Oct 2025", url: "#", image: article3 },
-  { title: "Inside The Coastal Retreat Changing Lives", source: "Harper's Bazaar", date: "Sep 2024", url: "#", image: article4 },
-  { title: "Why Breathwork Is the Next Therapy", source: "Forbes", date: "Jun 2024", url: "#", image: article5 },
 ];
