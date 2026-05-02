@@ -3,12 +3,13 @@ import article2 from "@/assets/article-2.png";
 import article3 from "@/assets/article-3.png";
 import article4 from "@/assets/article-4.png";
 import article5 from "@/assets/article-5.png";
+import logoVogue from "@/assets/logo-vogue.png";
 
 // Logos for "Affiliations and As seen on" carousel.
 // Replace `src` with the path to your uploaded logo image (e.g. "/logos/vogue.png"
 // or an imported asset). `alt` is the accessible name shown to screen readers.
 export const PRESS_LOGOS: { src: string; alt: string }[] = [
-  { src: "/placeholder.svg", alt: "Vogue" },
+  { src: logoVogue, alt: "Vogue" },
   { src: "/placeholder.svg", alt: "Elle" },
   { src: "/placeholder.svg", alt: "Well+Good" },
   { src: "/placeholder.svg", alt: "Goop" },
