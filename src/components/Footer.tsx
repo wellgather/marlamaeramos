@@ -61,10 +61,10 @@ export const Footer = () => (
         </div>
       </div>
       <div>
-        <div className="text-xs uppercase tracking-widest text-muted-foreground mb-3">Explore</div>
+        <div className="text-xs uppercase tracking-widest text-muted-foreground mb-3">IMMERSE</div>
         <ul className="space-y-2 text-sm">
           <li><Link to="/wellness-experience" className="hover:text-primary transition-colors">Design Your Wellness Experience</Link></li>
-          <li><Link to="/hospitality" className="hover:text-primary transition-colors">Get Wellness Certified</Link></li>
+          <li><Link to="/hospitality" className="hover:text-primary transition-colors">Get Wellness Certified </Link></li>
           <li><Link to="/courses" className="hover:text-primary transition-colors">Courses</Link></li>
           <li><Link to="/experiences" className="hover:text-primary transition-colors">Experiences</Link></li>
         </ul>
