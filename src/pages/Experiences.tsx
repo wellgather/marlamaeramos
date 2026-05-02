@@ -102,7 +102,7 @@ const Experiences = () => {
       </section>
 
       {/* FINAL CTA */}
-      <section className="container pt-8 pb-10">
+      <section className="container pt-8 pb-4">
         <div className="relative overflow-hidden rounded-3xl bg-gradient-coral p-12 md:p-20 text-primary-foreground text-center">
           <h2 className="font-display text-4xl md:text-6xl mb-5 leading-tight">
             Start and share your wellness journey.
@@ -122,7 +122,7 @@ const Experiences = () => {
       </section>
 
       {/* INSTAGRAM COLLAGE — minimalist 6-image strip */}
-      <section className="container pb-24">
+      <section className="container pt-4 pb-24">
         <a
           href="https://www.instagram.com/wellgather"
           target="_blank"
