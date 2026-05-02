@@ -37,8 +37,7 @@ export const Header = () => {
   const consultancyActive = consultancyChildren.some(c => location.pathname.startsWith(c.to));
 
   return (
-    <header className="sticky top-0 z-40 w-full">
-      <div className="absolute inset-0 backdrop-blur-xl bg-background/70 border-b border-border/40" />
+    <header className="absolute top-0 left-0 right-0 z-40 w-full">
       <div className="container relative flex items-center justify-between h-20">
         <div className="flex items-center gap-3">
           <Link to="/" className="font-display text-xl tracking-tight">
@@ -60,7 +59,7 @@ export const Header = () => {
           </Button>
         </div>
 
-        <nav className="hidden md:flex items-center gap-1">
+        <nav className="hidden sm:flex items-center gap-1">
           <NavLink to="/courses" className={({ isActive }) => linkClass(isActive)}>
             {({ isActive }) => (
               <>
@@ -138,7 +137,7 @@ export const Header = () => {
 
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden rounded-full">
+              <Button variant="ghost" size="icon" className="sm:hidden rounded-full">
                 <Menu className="h-5 w-5" />
               </Button>
             </SheetTrigger>
