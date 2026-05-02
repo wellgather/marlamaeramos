@@ -43,7 +43,7 @@ const pillars = [
   {
     icon: HeartHandshake,
     title: "Intuitive & Energy Led",
-    desc: "Designed around you — never one-size-fits-all.",
+    desc: "Blending strategy with intention for meaningful experiences.",
   },
   {
     icon: Compass,
