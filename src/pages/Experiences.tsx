@@ -1,33 +1,25 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, Sparkles, Calendar, MapPin } from "lucide-react";
-import soundHealing from "@/assets/exp-soundhealing.jpg";
-import retreat from "@/assets/exp-retreat.jpg";
-import yoga from "@/assets/exp-yoga.jpg";
 import collage1 from "@/assets/collage-1.jpg";
 import collage2 from "@/assets/collage-2.jpg";
 import collage3 from "@/assets/collage-3.jpg";
 import collage4 from "@/assets/collage-4.jpg";
 import collage5 from "@/assets/collage-5.jpg";
 import collage6 from "@/assets/collage-6.jpg";
+import { UPCOMING_EXPERIENCES } from "@/data/experiences";
 
-const PAYPAL_URL = "https://www.wellgather.com?utm_source=website&utm_medium=web&utm_campaign=marlaramoswebsite&utm_id=mramos&utm_term=mmwebsite"; // user will swap
-
+const PAYPAL_URL = "https://www.wellgather.com?utm_source=website&utm_medium=web&utm_campaign=marlaramoswebsite&utm_id=mramos&utm_term=mmwebsite";
 const CALENDAR_URL = "https://calendar.notion.so/meet/marlaramos/wellgather";
 
-const slides = [
-  { src: retreat, title: "Coastal Retreats", desc: "Five-day immersions on the edge of the sea.", date: "TBA", location: "Bali", url: "https://www.wellgather.com" },
-  { src: soundHealing, title: "Sound Healing", desc: "Crystal bowls, voice, and frequency journeys.", date: "TBA", location: "Bali", url: "https://www.wellgather.com" },
-  { src: yoga, title: "Movement & Breath", desc: "Sunrise sessions to wake the body gently.", date: "TBA", location: "Bali", url: "https://www.wellgather.com" },
-];
+const slides = UPCOMING_EXPERIENCES;
 
 const Experiences = () => {
   const [i, setI] = useState(0);
-  useEffect(() => {
-    const t = setInterval(() => setI(p => (p + 1) % slides.length), 5000);
-    return () => clearInterval(t);
-  }, []);
+  const next = () => setI((p) => (p + 1) % slides.length);
+  const prev = () => setI((p) => (p - 1 + slides.length) % slides.length);
+
 
   return (
     <>
