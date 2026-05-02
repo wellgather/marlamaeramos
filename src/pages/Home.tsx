@@ -166,6 +166,32 @@ const Home = () => (
       </div>
     </section>
 
+    {/* AFFILIATIONS — moved here, right below The Philosophy */}
+    <section className="container py-16 md:py-20">
+      <div className="text-center mb-10">
+        <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-3">Affiliations</p>
+        <h2 className="font-display text-3xl md:text-4xl">Trusted partners & accreditations</h2>
+      </div>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 max-w-5xl mx-auto">
+        {AFFILIATIONS.map(a => (
+          <div
+            key={a.name}
+            className="aspect-[3/2] rounded-2xl bg-white border border-border/40 shadow-card flex items-center justify-center p-4 hover:shadow-soft transition-shadow"
+          >
+            {a.logo ? (
+              <img src={a.logo} alt={a.name} className="max-h-12 w-auto opacity-80" loading="lazy" />
+            ) : (
+              <span className="font-display text-base md:text-lg text-foreground/60 text-center tracking-wide">
+                {a.name}
+              </span>
+            )}
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <PressMarquee />
+
     {/* UPCOMING EXPERIENCES — modeled after pilates "Our Sessions" banner */}
     <section className="bg-gradient-soft border-y border-border/40 py-20 md:py-28">
       <div className="container">
@@ -225,31 +251,6 @@ const Home = () => (
       </div>
     </section>
 
-    {/* AFFILIATIONS */}
-    <section className="container py-16 md:py-20">
-      <div className="text-center mb-10">
-        <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-3">Affiliations</p>
-        <h2 className="font-display text-3xl md:text-4xl">Trusted partners & accreditations</h2>
-      </div>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 max-w-5xl mx-auto">
-        {AFFILIATIONS.map(a => (
-          <div
-            key={a.name}
-            className="aspect-[3/2] rounded-2xl bg-white border border-border/40 shadow-card flex items-center justify-center p-4 hover:shadow-soft transition-shadow"
-          >
-            {a.logo ? (
-              <img src={a.logo} alt={a.name} className="max-h-12 w-auto opacity-80" loading="lazy" />
-            ) : (
-              <span className="font-display text-base md:text-lg text-foreground/60 text-center tracking-wide">
-                {a.name}
-              </span>
-            )}
-          </div>
-        ))}
-      </div>
-    </section>
-
-    <PressMarquee />
     <ArticlesGrid />
   </>
 );
