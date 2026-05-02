@@ -37,7 +37,7 @@ const ctas = [
 const pillars = [
   {
     icon: Leaf,
-    title: "Rooted in Practice",
+    title: "Rooted in Experience",
     desc: "Ancient traditions meet modern coaching.",
   },
   {
