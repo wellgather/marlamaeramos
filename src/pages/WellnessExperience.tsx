@@ -110,13 +110,13 @@ const WellnessExperience = () => (
           A complete 3-month container
         </h2>
         <div className="flex items-end justify-center gap-2 mb-2">
-          <span className="font-display text-6xl md:text-7xl">$4,500</span>
+          <span className="font-display text-6xl md:text-7xl">$399</span>
           <span className="text-sm opacity-70 mb-3">USD</span>
         </div>
-        <p className="text-sm opacity-80 mb-8">or 3 monthly payments of $1,600</p>
+        <p className="text-sm opacity-80 mb-8">or 3 monthly payments of $133</p>
 
         <ul className="grid sm:grid-cols-2 gap-3 max-w-md mx-auto mb-10 text-left text-sm">
-          {["12 private sessions", "Daily voice support", "Custom practice library", "Closing ceremony"].map(f => (
+          {["coaching calls", "Daily voice support", "Custom practice library", "Closing ceremony"].map(f => (
             <li key={f} className="flex items-center gap-2"><Check className="w-4 h-4" /> {f}</li>
           ))}
         </ul>
