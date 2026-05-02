@@ -23,7 +23,7 @@ export const TIERS: PricingTier[] = [
       "Gap analysis (top 10–20 issues)",
       "Audit Evaluation for audit readiness",
       "Audit Analysis",
-      "Audit Playbook",
+      "Audit Playbook & roadmap",
       "Action plan to be audit-ready",
       "Executive summary report",
       "Audit Application & Coordination",
@@ -43,7 +43,7 @@ export const TIERS: PricingTier[] = [
     features: [
       "Guidance from pre- to official certification",
       "Audit Analysis",
-      "Audit Playbook",
+      "Audit Playbook & roadmap",
       "Audit Evaluation for audit readiness",
       "Immersion & Audit of Guest Experience Process",
       "Guest Experience Design",
