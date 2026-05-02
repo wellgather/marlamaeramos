@@ -66,7 +66,7 @@ const WellnessExperience = () => (
           {[
             { q: "Building a Repeat Wellness Community", a: "If you feel unsure what actually works in wellness and worry your offering may come across as generic or inauthentic, I guide you with real industry insight so you can create experiences that truly resonate, convert, and avoid wellness washing that today’s consumers can easily recognise." },
             { q: "SOP Framework & Compounding Knowledge", a: "If your wellness offering feels scattered or lacks depth, I help you shape it into a clear, intentional experience that flows seamlessly, avoids activities that don’t truly fit your brand, stands out in your market, and creates real impact for your guests." },
-            { q: "Ritual Design", a: "Together we craft daily and seasonal rituals that fit your life — sustainable practices you'll carry far beyond our work." },
+            { q: "Ritual Design", a: "If your delivery relies too much on individuals and lacks consistency, I give you a structured system your team can follow, refine, and scale so your wellness offering becomes stronger, more consistent, and easier to grow over time." },
             { q: "Integration & Guidance", a: "Voice memos, written reflections, custom audio meditations — between-session support so you're never doing the work alone." },
             { q: "A Closing Ceremony", a: "A final session held as ceremony — to honor what's been transformed and seal the next chapter." },
           ].map((item, i) => (
