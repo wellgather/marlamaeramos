@@ -248,12 +248,12 @@ const Hospitality = () => {
 
       {/* FOOTER CTA */}
       <section className="container pb-24">
-        <div className="relative overflow-hidden rounded-3xl bg-foreground text-background p-12 md:p-16 text-center">
+        <div className="relative overflow-hidden rounded-3xl text-background p-12 md:p-16 text-center bg-[#ffebcc]">
           <Sparkles className="w-6 h-6 text-primary mx-auto mb-4" />
-          <h2 className="font-display text-4xl md:text-5xl mb-4 leading-tight">
+          <h2 className="font-display text-4xl md:text-5xl mb-4 leading-tight text-primary">
             Ready to make it official?
           </h2>
-          <p className="text-base opacity-80 max-w-xl mx-auto mb-8">
+          <p className="text-base opacity-80 max-w-xl mx-auto mb-8 text-secondary-foreground">
             Book a complimentary discovery call. We'll map your fastest path to certification.
           </p>
           <Button variant="coral" size="xl" asChild>
