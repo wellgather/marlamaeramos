@@ -16,8 +16,7 @@ const Courses = () => (
             Courses & <em className="text-primary not-italic">practices</em>
           </h1>
           <p className="text-lg text-foreground/70 max-w-xl mx-auto">
-            Self-paced journeys to return to, again and again. Secure checkout via ThriveCart —
-            discount codes can be applied at checkout.
+            Self-paced journeys to hep you design your own transformative wellness experience that you can return to, again and again. 
           </p>
         </motion.div>
       </div>
