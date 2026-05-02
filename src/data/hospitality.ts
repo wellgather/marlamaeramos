@@ -16,7 +16,7 @@ export const TIERS: PricingTier[] = [
     tagline: "Tier 1",
     price: "$1,999",
     valueLabel: "$5,000 USD in value",
-    idealFor: "Small hotels · early-stage · quick assessment",
+    idealFor: "independent properties · quick assessment",
     features: [
       "Wellness Certified Scorecard",
       "Pillar scoring (WITT-aligned)",
