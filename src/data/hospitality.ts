@@ -68,8 +68,8 @@ export const PAIN_POINTS = [
 ];
 
 export const CREDENTIALS = [
-  "WITT Accredited Professional",
-  "Wellness Travel Specialist — WTA",
+  "Certified WITT® Accredited Professional",
+  "Certified WITT® Wellness Specialist",
 ];
 
 export const TESTIMONIALS = [
