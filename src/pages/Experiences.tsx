@@ -50,8 +50,8 @@ const Experiences = () => {
       {/* SLIDESHOW */}
       <section className="container py-16">
         <div className="text-center mb-10">
-          <p className="text-xs uppercase tracking-[0.3em] text-primary mb-3">A glimpse</p>
-          <h2 className="font-display text-4xl md:text-5xl">Inside the experiences</h2>
+          <p className="text-xs uppercase tracking-[0.3em] text-primary mb-3">THE MOVEMENT</p>
+          <h2 className="font-display text-4xl md:text-5xl">Join our mission to make wellness experiences accessible and part of the daily lives of every person.</h2>
         </div>
 
         <div className="relative max-w-5xl mx-auto">
@@ -134,13 +134,13 @@ const Experiences = () => {
       <section className="container pb-24">
         <div className="relative overflow-hidden rounded-3xl bg-gradient-coral p-12 md:p-20 text-primary-foreground text-center">
           <h2 className="font-display text-4xl md:text-6xl mb-5 leading-tight">
-            Your seat is waiting.
+            Start and share your wellness journey.
           </h2>
           <p className="text-lg opacity-90 max-w-xl mx-auto mb-10">
-            Tell me which experience calls you, and I'll send the next available dates.
+            Be the reason wellness happens where you are. Experience, share, and co-create wellness moments that inspire others to live well. 
           </p>
           <Button variant="cream" size="xl" asChild>
-            <a href={PAYPAL_URL} target="_blank" rel="noreferrer">Reserve Your Spot</a>
+            <a href={PAYPAL_URL} target="_blank" rel="noreferrer">Join Now!</a>
           </Button>
         </div>
       </section>
