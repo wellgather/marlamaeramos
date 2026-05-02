@@ -1,4 +1,4 @@
-import bali from "@/assets/exp-bali.jpg";
+import bali from "@/assets/experience-1.jpg";
 import siargao from "@/assets/exp-siargao.jpg";
 import phuket from "@/assets/exp-phuket.jpg";
 
