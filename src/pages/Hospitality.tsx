@@ -255,7 +255,7 @@ const Hospitality = () => {
 
       {/* FOOTER CTA */}
       <section className="container pb-24">
-        <div className="relative overflow-hidden rounded-3xl text-background p-12 md:p-16 text-center bg-[#ffebcc]">
+        <div className="relative overflow-hidden rounded-3xl text-background p-12 md:p-16 text-center bg-[#ffefe0]">
           <Sparkles className="w-6 h-6 text-primary mx-auto mb-4" />
           <h2 className="font-display text-4xl md:text-5xl mb-4 leading-tight text-primary">
             Ready to make it official?
