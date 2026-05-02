@@ -28,7 +28,7 @@ const ctas = [
     to: "/courses",
     eyebrow: "Self-paced",
     title: "Courses",
-    desc: "Digital practices you return to forever.",
+    desc: "Learn how to design transformative wellness retreats.",
     style: "bg-secondary border border-border/40 shadow-card",
     arrowClass: "text-primary",
   },
