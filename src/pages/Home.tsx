@@ -212,7 +212,7 @@ const Home = () => (
                   </div>
                 </div>
               </div>
-            </motion.article>
+            </motion.a>
           ))}
         </div>
 
