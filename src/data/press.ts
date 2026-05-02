@@ -16,7 +16,7 @@ import logoPopSugar from "@/assets/logo-popsugar.png";
 // Replace `src` with the path to your uploaded logo image (e.g. "/logos/vogue.png"
 // or an imported asset). `alt` is the accessible name shown to screen readers.
 export const PRESS_LOGOS: { src: string; alt: string }[] = [
-  { src: logoVogue, alt: "Vogue" },
+  { src: logoVogue, alt: "MEDIUM" },
   { src: logoElle, alt: "Elle" },
   { src: logoWellGood, alt: "Well+Good" },
   { src: logoGoop, alt: "Goop" },
