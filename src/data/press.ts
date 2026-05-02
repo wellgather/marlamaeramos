@@ -34,7 +34,7 @@ export const ARTICLES: {
   url: string;
   image: string;
 }[] = [
-  { title: "The Quiet Revolution of Slow Wellness", source: "Vogue", date: "Mar 2025", url: "#", image: article1 },
+  { title: "Wellness Reimagined: 5 Things to Reform the Wellness Industry", source: "MEDIUM", date: "Mar 2026", url: "#", image: article1 },
   { title: "How Sound Healing Reaches Where Words Can't", source: "Well+Good", date: "Jan 2025", url: "#", image: article2 },
   { title: "A New Definition of Self-Care", source: "Goop", date: "Nov 2024", url: "#", image: article3 },
   { title: "Inside The Coastal Retreat Changing Lives", source: "Harper's Bazaar", date: "Sep 2024", url: "#", image: article4 },
