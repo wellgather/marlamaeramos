@@ -43,7 +43,7 @@ export const Footer = () => (
     </div>
     <div className="container py-12 grid md:grid-cols-3 gap-8">
       <div>
-        <div className="font-display text-2xl mb-2">Aria · Wellness</div>
+        <div className="font-display text-2xl mb-2">Marla Ramos</div>
         <p className="text-sm text-muted-foreground max-w-xs">
           A path back to your body. A practice toward your truest self.
         </p>
@@ -80,7 +80,7 @@ export const Footer = () => (
       </div>
     </div>
     <div className="border-t border-border/40 py-6 text-center text-xs text-muted-foreground">
-      © {new Date().getFullYear()} Aria Wellness. Crafted with intention.
+      © {new Date().getFullYear()} Marla Ramos. Crafted with intention.
     </div>
   </footer>
 );

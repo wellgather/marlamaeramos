@@ -41,7 +41,7 @@ export const Header = () => {
       <div className="container relative flex items-center justify-between h-20">
         <div className="flex items-center gap-3">
           <Link to="/" className="font-display text-xl tracking-tight">
-            Aria <span className="text-primary">·</span> Wellness
+            Marla Ramos
           </Link>
           <Button
             variant="coral"
@@ -112,16 +112,16 @@ export const Header = () => {
             <SheetTrigger asChild>
               <button className="rounded-full ring-2 ring-primary/20 hover:ring-primary/60 transition-all overflow-hidden">
                 <Avatar className="h-11 w-11">
-                  <AvatarImage src={portrait} alt="About Aria" />
-                  <AvatarFallback className="bg-primary-soft text-primary">A</AvatarFallback>
+                  <AvatarImage src={portrait} alt="Marla Ramos" />
+                  <AvatarFallback className="bg-primary-soft text-primary">MR</AvatarFallback>
                 </Avatar>
               </button>
             </SheetTrigger>
             <SheetContent className="w-full sm:max-w-md bg-background overflow-y-auto">
               <div className="space-y-6 pt-6">
-                <img src={portrait} alt="Aria" className="w-32 h-32 rounded-full mx-auto object-cover ring-4 ring-primary-soft" />
+                <img src={portrait} alt="Marla Ramos" className="w-32 h-32 rounded-full mx-auto object-cover ring-4 ring-primary-soft" />
                 <div className="text-center space-y-2">
-                  <h2 className="font-display text-3xl">About Aria</h2>
+                  <h2 className="font-display text-3xl">Marla Ramos</h2>
                   <p className="text-sm text-muted-foreground uppercase tracking-widest">Wellness Expert · Coach · Guide</p>
                 </div>
                 <div className="space-y-4 text-foreground/80 leading-relaxed">
