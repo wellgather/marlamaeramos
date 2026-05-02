@@ -43,7 +43,7 @@ export const Footer = () => (
       <div>
         <div className="font-display text-2xl mb-2">Marla Ramos</div>
         <p className="text-sm text-muted-foreground max-w-xs">
-          A path back to your body. A practice toward your truest self.
+          Leading the social wellness experience movement.
         </p>
         <div className="flex items-center gap-3 mt-5">
           {socials.map(({ href, label, Icon }) => (
