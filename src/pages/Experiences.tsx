@@ -1,7 +1,6 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight, Sparkles, Calendar, MapPin } from "lucide-react";
+import { Sparkles, Calendar, MapPin } from "lucide-react";
 import collage1 from "@/assets/collage-1.jpg";
 import collage2 from "@/assets/collage-2.jpg";
 import collage3 from "@/assets/collage-3.jpg";
@@ -16,11 +15,6 @@ const CALENDAR_URL = "https://calendar.notion.so/meet/marlaramos/wellgather";
 const slides = UPCOMING_EXPERIENCES;
 
 const Experiences = () => {
-  const [i, setI] = useState(0);
-  const next = () => setI((p) => (p + 1) % slides.length);
-  const prev = () => setI((p) => (p - 1 + slides.length) % slides.length);
-
-
   return (
     <>
       {/* HERO */}
