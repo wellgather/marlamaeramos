@@ -10,6 +10,7 @@ import logoGoop from "@/assets/logo-goop.png";
 import logoMindBodyGreen from "@/assets/logo-mindbodygreen.png";
 import logoForbes from "@/assets/logo-forbes.png";
 import logoHarpersBazaar from "@/assets/logo-harpersbazaar.png";
+import logoPopSugar from "@/assets/logo-popsugar.png";
 
 // Logos for "Affiliations and As seen on" carousel.
 // Replace `src` with the path to your uploaded logo image (e.g. "/logos/vogue.png"
@@ -22,7 +23,7 @@ export const PRESS_LOGOS: { src: string; alt: string }[] = [
   { src: logoMindBodyGreen, alt: "MindBodyGreen" },
   { src: logoForbes, alt: "Forbes" },
   { src: logoHarpersBazaar, alt: "Harper's Bazaar" },
-  { src: "/placeholder.svg", alt: "PopSugar" },
+  { src: logoPopSugar, alt: "PopSugar" },
 ];
 
 // Articles slideshow — add `image` (path to uploaded image) and `url` (link) per item.
