@@ -80,7 +80,7 @@ export const Footer = () => (
       </div>
     </div>
     <div className="border-t border-border/40 py-6 text-center text-xs text-muted-foreground">
-      © {new Date().getFullYear()} Aria Wellness. Crafted with intention.
+      © {new Date().getFullYear()} Marla Ramos. Crafted with intention.
     </div>
   </footer>
 );
