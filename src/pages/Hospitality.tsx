@@ -155,7 +155,7 @@ const Hospitality = () => {
       {/* TESTIMONIALS BANNER SLIDESHOW */}
       <section className="container pb-24">
         <div className="relative max-w-5xl mx-auto rounded-3xl overflow-hidden bg-gradient-coral text-primary-foreground shadow-coral">
-          <div className="px-8 md:px-16 py-12 md:py-16 min-h-[220px] flex items-center">
+          <div className="px-8 md:px-16 py-12 md:py-16 min-h-[220px] flex items-center bg-[#ffefe0] text-primary">
             <AnimatePresence mode="wait">
               <motion.div
                 key={slide}
