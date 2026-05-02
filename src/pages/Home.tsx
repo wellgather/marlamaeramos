@@ -56,7 +56,7 @@ const pillars = [
 const Home = () => (
   <>
     {/* HERO — full-bleed featured image with overlay form */}
-    <section className="relative pb-44 md:pb-56">
+    <section className="relative pb-8 md:pb-12">
       <div className="relative w-full h-[78vh] min-h-[560px] md:h-[88vh] overflow-hidden">
         <img
           src={heroSunset}
@@ -134,7 +134,7 @@ const Home = () => (
     </section>
 
     {/* PHILOSOPHY — short description + 3 icon pillars (vector-style trio) */}
-    <section className="container py-20 md:py-28">
+    <section className="container py-12 md:py-16">
       <div className="max-w-2xl mx-auto text-center mb-14">
         <p className="text-xs uppercase tracking-[0.3em] text-primary mb-4">The philosophy</p>
         <h2 className="font-display text-4xl md:text-5xl leading-tight mb-5">
