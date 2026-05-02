@@ -104,9 +104,14 @@ const Experiences = () => {
           <p className="text-lg opacity-90 max-w-xl mx-auto mb-10">
             Be the reason wellness happens where you are. Experience, share, and co-create wellness moments that inspire others to live well. 
           </p>
-          <Button variant="cream" size="xl" asChild>
-            <a href={PAYPAL_URL} target="_blank" rel="noreferrer">Join Now!</a>
-          </Button>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <Button variant="cream" size="xl" asChild>
+              <a href={PAYPAL_URL} target="_blank" rel="noreferrer">Join Now!</a>
+            </Button>
+            <Button variant="outline" size="xl" asChild>
+              <a href="https://wellgather.com/mission/" target="_blank" rel="noreferrer">Support Our Mission</a>
+            </Button>
+          </div>
         </div>
       </section>
 
