@@ -28,7 +28,7 @@ const Experiences = () => {
         <div className="container py-20 md:py-32 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9 }} className="max-w-3xl mx-auto space-y-6">
             <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-primary px-4 py-2 rounded-full bg-primary-soft/60">
-              <Sparkles className="w-3 h-3" /> THE MOVEMENT
+              <Sparkles className="w-3 h-3" /> IN-PERSON GATHERINGS
             </span>
             <h1 className="font-display text-5xl leading-[1.05] text-secondary-foreground md:text-9xl">
               Don't miss the wellness experiences <em className="text-primary not-italic">near you.</em>
