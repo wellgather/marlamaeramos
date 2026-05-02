@@ -5,6 +5,12 @@ import { ChevronLeft, ChevronRight, Sparkles } from "lucide-react";
 import soundHealing from "@/assets/exp-soundhealing.jpg";
 import retreat from "@/assets/exp-retreat.jpg";
 import yoga from "@/assets/exp-yoga.jpg";
+import collage1 from "@/assets/collage-1.jpg";
+import collage2 from "@/assets/collage-2.jpg";
+import collage3 from "@/assets/collage-3.jpg";
+import collage4 from "@/assets/collage-4.jpg";
+import collage5 from "@/assets/collage-5.jpg";
+import collage6 from "@/assets/collage-6.jpg";
 
 const PAYPAL_URL = "https://www.wellgather.com?utm_source=website&utm_medium=web&utm_campaign=marlaramoswebsite&utm_id=mramos&utm_term=mmwebsite"; // user will swap
 
@@ -125,7 +131,7 @@ const Experiences = () => {
           aria-label="View @wellgather on Instagram"
         >
           <div className="grid grid-cols-3 md:grid-cols-6 gap-1 md:gap-2">
-            {[soundHealing, retreat, yoga, retreat, soundHealing, yoga].map((src, idx) => (
+            {[collage1, collage2, collage3, collage4, collage5, collage6].map((src, idx) => (
               <div key={idx} className="aspect-square overflow-hidden">
                 <img
                   src={src}
