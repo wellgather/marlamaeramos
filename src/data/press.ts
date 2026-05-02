@@ -7,6 +7,7 @@ import logoVogue from "@/assets/logo-vogue.png";
 import logoElle from "@/assets/logo-elle.png";
 import logoWellGood from "@/assets/logo-wellgood.png";
 import logoGoop from "@/assets/logo-goop.png";
+import logoMindBodyGreen from "@/assets/logo-mindbodygreen.png";
 
 // Logos for "Affiliations and As seen on" carousel.
 // Replace `src` with the path to your uploaded logo image (e.g. "/logos/vogue.png"
@@ -16,7 +17,7 @@ export const PRESS_LOGOS: { src: string; alt: string }[] = [
   { src: logoElle, alt: "Elle" },
   { src: logoWellGood, alt: "Well+Good" },
   { src: logoGoop, alt: "Goop" },
-  { src: "/placeholder.svg", alt: "MindBodyGreen" },
+  { src: logoMindBodyGreen, alt: "MindBodyGreen" },
   { src: "/placeholder.svg", alt: "Forbes" },
   { src: "/placeholder.svg", alt: "Harper's Bazaar" },
   { src: "/placeholder.svg", alt: "PopSugar" },
