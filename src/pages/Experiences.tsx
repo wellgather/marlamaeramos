@@ -1,33 +1,25 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, Sparkles, Calendar, MapPin } from "lucide-react";
-import soundHealing from "@/assets/exp-soundhealing.jpg";
-import retreat from "@/assets/exp-retreat.jpg";
-import yoga from "@/assets/exp-yoga.jpg";
 import collage1 from "@/assets/collage-1.jpg";
 import collage2 from "@/assets/collage-2.jpg";
 import collage3 from "@/assets/collage-3.jpg";
 import collage4 from "@/assets/collage-4.jpg";
 import collage5 from "@/assets/collage-5.jpg";
 import collage6 from "@/assets/collage-6.jpg";
+import { UPCOMING_EXPERIENCES } from "@/data/experiences";
 
-const PAYPAL_URL = "https://www.wellgather.com?utm_source=website&utm_medium=web&utm_campaign=marlaramoswebsite&utm_id=mramos&utm_term=mmwebsite"; // user will swap
-
+const PAYPAL_URL = "https://www.wellgather.com?utm_source=website&utm_medium=web&utm_campaign=marlaramoswebsite&utm_id=mramos&utm_term=mmwebsite";
 const CALENDAR_URL = "https://calendar.notion.so/meet/marlaramos/wellgather";
 
-const slides = [
-  { src: retreat, title: "Coastal Retreats", desc: "Five-day immersions on the edge of the sea.", date: "TBA", location: "Bali", url: "https://www.wellgather.com" },
-  { src: soundHealing, title: "Sound Healing", desc: "Crystal bowls, voice, and frequency journeys.", date: "TBA", location: "Bali", url: "https://www.wellgather.com" },
-  { src: yoga, title: "Movement & Breath", desc: "Sunrise sessions to wake the body gently.", date: "TBA", location: "Bali", url: "https://www.wellgather.com" },
-];
+const slides = UPCOMING_EXPERIENCES;
 
 const Experiences = () => {
   const [i, setI] = useState(0);
-  useEffect(() => {
-    const t = setInterval(() => setI(p => (p + 1) % slides.length), 5000);
-    return () => clearInterval(t);
-  }, []);
+  const next = () => setI((p) => (p + 1) % slides.length);
+  const prev = () => setI((p) => (p - 1 + slides.length) % slides.length);
+
 
   return (
     <>
@@ -62,51 +54,67 @@ const Experiences = () => {
           <h2 className="font-display text-4xl md:text-5xl">Join my upcoming wellness activities.</h2>
         </div>
 
-        <div className="relative max-w-5xl mx-auto">
-          <div className="relative aspect-[16/10] rounded-3xl overflow-hidden shadow-coral bg-secondary">
-            <AnimatePresence mode="wait">
-              <motion.a
-                key={i}
-                href={slides[i].url}
-                target="_blank"
-                rel="noopener noreferrer"
-                initial={{ opacity: 0, scale: 1.05 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.8 }}
-                className="absolute inset-0 block cursor-pointer"
-                aria-label={`Learn more about ${slides[i].title}`}
-              >
-                <img src={slides[i].src} alt={slides[i].title} className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12 text-primary-foreground">
-                  <h3 className="font-display text-3xl md:text-5xl mb-2">{slides[i].title}</h3>
-                  <p className="text-base md:text-lg opacity-90 max-w-md">{slides[i].desc}</p>
-                  <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm md:text-base opacity-95">
-                    <span className="inline-flex items-center gap-1.5"><Calendar className="w-4 h-4" /> {slides[i].date}</span>
-                    <span className="inline-flex items-center gap-1.5"><MapPin className="w-4 h-4" /> {slides[i].location}</span>
+        <div className="relative max-w-md mx-auto">
+          <div className="relative h-[560px]">
+            {slides.map((e, idx) => {
+              const offset = (idx - i + slides.length) % slides.length;
+              const isTop = offset === 0;
+              return (
+                <motion.a
+                  key={e.title}
+                  href={e.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  animate={{
+                    x: offset * 18,
+                    y: offset * 18,
+                    scale: 1 - offset * 0.05,
+                    opacity: offset > 2 ? 0 : 1,
+                    zIndex: slides.length - offset,
+                  }}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
+                  className="absolute inset-0 block rounded-3xl overflow-hidden bg-white shadow-card"
+                  style={{ pointerEvents: isTop ? "auto" : "none" }}
+                  aria-hidden={!isTop}
+                >
+                  <div className="relative w-full h-full overflow-hidden">
+                    <img src={e.image} alt={e.title} className="w-full h-full object-cover" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                    <div className="absolute top-4 left-4">
+                      <span className="text-[10px] uppercase tracking-widest bg-white/90 text-primary px-3 py-1.5 rounded-full">
+                        {e.type}
+                      </span>
+                    </div>
+                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                      <h3 className="font-display text-2xl leading-tight mb-2">{e.title}</h3>
+                      <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs opacity-95">
+                        <span className="inline-flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5" /> {e.date}</span>
+                        <span className="inline-flex items-center gap-1.5"><MapPin className="w-3.5 h-3.5" /> {e.location}</span>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </motion.a>
-            </AnimatePresence>
+                </motion.a>
+              );
+            })}
           </div>
 
-          <button onClick={() => setI(p => (p - 1 + slides.length) % slides.length)} className="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/80 backdrop-blur flex items-center justify-center shadow-soft hover:bg-white transition-colors">
-            <ChevronLeft className="w-5 h-5" />
-          </button>
-          <button onClick={() => setI(p => (p + 1) % slides.length)} className="absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/80 backdrop-blur flex items-center justify-center shadow-soft hover:bg-white transition-colors">
-            <ChevronRight className="w-5 h-5" />
-          </button>
-
-          <div className="flex justify-center gap-2 mt-6">
-            {slides.map((_, idx) => (
-              <button
-                key={idx}
-                onClick={() => setI(idx)}
-                className={`h-1.5 rounded-full transition-all ${idx === i ? "w-10 bg-primary" : "w-2 bg-border"}`}
-                aria-label={`Slide ${idx + 1}`}
-              />
-            ))}
+          <div className="flex items-center justify-center gap-4 mt-8">
+            <button onClick={prev} className="w-11 h-11 rounded-full bg-white shadow-soft flex items-center justify-center hover:bg-secondary transition-colors" aria-label="Previous">
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <div className="flex gap-2">
+              {slides.map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setI(idx)}
+                  className={`h-1.5 rounded-full transition-all ${idx === i ? "w-10 bg-primary" : "w-2 bg-border"}`}
+                  aria-label={`Slide ${idx + 1}`}
+                />
+              ))}
+            </div>
+            <button onClick={next} className="w-11 h-11 rounded-full bg-white shadow-soft flex items-center justify-center hover:bg-secondary transition-colors" aria-label="Next">
+              <ChevronRight className="w-5 h-5" />
+            </button>
           </div>
         </div>
       </section>
