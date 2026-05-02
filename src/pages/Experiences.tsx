@@ -95,8 +95,23 @@ const Experiences = () => {
         </div>
       </section>
 
+      {/* FINAL CTA */}
+      <section className="container pt-8 pb-10">
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-coral p-12 md:p-20 text-primary-foreground text-center">
+          <h2 className="font-display text-4xl md:text-6xl mb-5 leading-tight">
+            Start and share your wellness journey.
+          </h2>
+          <p className="text-lg opacity-90 max-w-xl mx-auto mb-10">
+            Be the reason wellness happens where you are. Experience, share, and co-create wellness moments that inspire others to live well. 
+          </p>
+          <Button variant="cream" size="xl" asChild>
+            <a href={PAYPAL_URL} target="_blank" rel="noreferrer">Join Now!</a>
+          </Button>
+        </div>
+      </section>
+
       {/* INSTAGRAM COLLAGE — minimalist 6-image strip */}
-      <section className="container pt-8 pb-20">
+      <section className="container pb-24">
         <a
           href="https://www.instagram.com/wellgather"
           target="_blank"
@@ -117,21 +132,6 @@ const Experiences = () => {
             ))}
           </div>
         </a>
-      </section>
-
-      {/* FINAL CTA */}
-      <section className="container pb-24">
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-coral p-12 md:p-20 text-primary-foreground text-center">
-          <h2 className="font-display text-4xl md:text-6xl mb-5 leading-tight">
-            Start and share your wellness journey.
-          </h2>
-          <p className="text-lg opacity-90 max-w-xl mx-auto mb-10">
-            Be the reason wellness happens where you are. Experience, share, and co-create wellness moments that inspire others to live well. 
-          </p>
-          <Button variant="cream" size="xl" asChild>
-            <a href={PAYPAL_URL} target="_blank" rel="noreferrer">Join Now!</a>
-          </Button>
-        </div>
       </section>
     </>
   );
