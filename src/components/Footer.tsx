@@ -74,7 +74,7 @@ export const Footer = () => (
         <a href="mailto:marla@wellgather.com" className="text-sm text-muted-foreground hover:text-primary transition-colors">
           Schedule a Call
         </a>
-        <p className="text-sm text-muted-foreground mt-1">By appointment, worldwide</p>
+        <p className="text-sm text-muted-foreground mt-1">&nbsp;</p>
       </div>
     </div>
     <div className="border-t border-border/40 py-6 text-center text-xs text-muted-foreground">
