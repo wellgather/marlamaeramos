@@ -26,6 +26,19 @@ const consultancyChildren = [
   },
 ];
 
+const retreatsChildren = [
+  {
+    to: "/retreats/facilitator-training",
+    label: "Wellness Retreat Facilitator Training",
+    sub: "Experience design training",
+  },
+  {
+    to: "/retreats/founders",
+    label: "Founders Wellness Retreat",
+    sub: "For soul-led entrepreneurs",
+  },
+];
+
 const linkClass = (active: boolean) =>
   `relative px-5 py-2 text-sm font-medium transition-colors rounded-full inline-flex items-center gap-1 ${
     active ? "text-primary" : "text-foreground/70 hover:text-foreground"
@@ -35,6 +48,7 @@ export const Header = () => {
   const [aboutOpen, setAboutOpen] = useState(false);
   const location = useLocation();
   const consultancyActive = consultancyChildren.some(c => location.pathname.startsWith(c.to));
+  const retreatsActive = location.pathname.startsWith("/retreats");
 
   return (
     <header className="sticky top-0 z-40 w-full bg-background/90 backdrop-blur border-b border-border/40">
@@ -83,6 +97,29 @@ export const Header = () => {
             </DropdownMenuTrigger>
             <DropdownMenuContent align="center" className="w-80 p-2 rounded-2xl shadow-soft border-border/60">
               {consultancyChildren.map(c => (
+                <DropdownMenuItem key={c.to} asChild className="rounded-xl p-3 cursor-pointer focus:bg-primary-soft/60">
+                  <Link to={c.to}>
+                    <div>
+                      <div className="font-display text-base text-foreground">{c.label}</div>
+                      <div className="text-xs text-muted-foreground mt-0.5">{c.sub}</div>
+                    </div>
+                  </Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <button type="button" className={linkClass(retreatsActive)}>
+                Retreats <ChevronDown className="w-3.5 h-3.5 opacity-70" />
+                {retreatsActive && (
+                  <motion.div layoutId="nav-pill" className="absolute inset-0 bg-primary-soft rounded-full -z-10" transition={{ type: "spring", stiffness: 400, damping: 30 }} />
+                )}
+              </button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="center" className="w-80 p-2 rounded-2xl shadow-soft border-border/60">
+              {retreatsChildren.map(c => (
                 <DropdownMenuItem key={c.to} asChild className="rounded-xl p-3 cursor-pointer focus:bg-primary-soft/60">
                   <Link to={c.to}>
                     <div>
@@ -147,6 +184,16 @@ export const Header = () => {
                   <div className="font-display text-3xl text-foreground/90">Consultancy</div>
                   <div className="pl-4 mt-2 space-y-2 border-l border-border">
                     {consultancyChildren.map(c => (
+                      <Link key={c.to} to={c.to} className="block text-base hover:text-primary transition-colors">
+                        {c.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+                <div className="pt-2">
+                  <div className="font-display text-3xl text-foreground/90">Retreats</div>
+                  <div className="pl-4 mt-2 space-y-2 border-l border-border">
+                    {retreatsChildren.map(c => (
                       <Link key={c.to} to={c.to} className="block text-base hover:text-primary transition-colors">
                         {c.label}
                       </Link>

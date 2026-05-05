@@ -9,6 +9,9 @@ import WellnessExperience from "./pages/WellnessExperience";
 import Hospitality from "./pages/Hospitality";
 import Courses from "./pages/Courses";
 import Experiences from "./pages/Experiences";
+import Retreats from "./pages/Retreats";
+import RetreatFacilitator from "./pages/RetreatFacilitator";
+import RetreatFounders from "./pages/RetreatFounders";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -28,6 +31,9 @@ const App = () => (
             <Route path="/consultancy" element={<Navigate to="/wellness-experience" replace />} />
             <Route path="/courses" element={<Courses />} />
             <Route path="/experiences" element={<Experiences />} />
+            <Route path="/retreats" element={<Retreats />} />
+            <Route path="/retreats/facilitator-training" element={<RetreatFacilitator />} />
+            <Route path="/retreats/founders" element={<RetreatFounders />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
