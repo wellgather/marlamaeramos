@@ -26,6 +26,19 @@ const consultancyChildren = [
   },
 ];
 
+const retreatsChildren = [
+  {
+    to: "/retreats/facilitator-training",
+    label: "Wellness Retreat Facilitator Training",
+    sub: "Experience design training",
+  },
+  {
+    to: "/retreats/founders",
+    label: "Founders Wellness Retreat",
+    sub: "For soul-led entrepreneurs",
+  },
+];
+
 const linkClass = (active: boolean) =>
   `relative px-5 py-2 text-sm font-medium transition-colors rounded-full inline-flex items-center gap-1 ${
     active ? "text-primary" : "text-foreground/70 hover:text-foreground"
@@ -35,6 +48,7 @@ export const Header = () => {
   const [aboutOpen, setAboutOpen] = useState(false);
   const location = useLocation();
   const consultancyActive = consultancyChildren.some(c => location.pathname.startsWith(c.to));
+  const retreatsActive = location.pathname.startsWith("/retreats");
 
   return (
     <header className="sticky top-0 z-40 w-full bg-background/90 backdrop-blur border-b border-border/40">
